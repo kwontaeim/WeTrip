@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="test.dao.MemberDao">
+
+	<resultMap type="member" id="memberMap">
+
+		<id column="mno" property="no" />
+
+		<result column="mnm" property="name" />
+		<result column="email" property="email" />
+		<result column="pwd" property="password" />
+		<result column="bir_dt" property="birthday" />
+		<result column="gend" property="gender" />
+		<result column="reg_dt" property="registedDate" />
+		<result column="mpho" property="memberPhoto" />
+		<result column="mreq" property="memberRequest" />
+
+	</resultMap>
+
+	<insert id="insert" parameterType="member" useGeneratedKeys="true" keyProperty="no" keyColumn="mno">
+    INSERT INTO TVL_MEMBS(MNM,
+    EMAIL, PWD, BIR_DT, GEND, REG_DT,MPHO,MREQ)
+    VALUES (#{name}, #{email},
+    PASSWORD(#{password}),
+    #{birthday}, #{gender}, NOW(), #{memberPhoto},0)
+	</insert>
+	
+	<insert id="memberRequestAdd">
+		INSERT INTO TVL_MEMBS(MNM,
+		EMAIL, PWD, BIR_DT, GEND, REG_DT)
+		VALUES (#{name}, #{email},
+		PASSWORD(#{password}),
+		#{birthday}, #{gender}, NOW())
+	</insert>
+
+	<select id="selectList" resultMap="memberMap" parameterType="map">
+		SELECT MNO, MNM, EMAIL,
+		BIR_DT, GEND, REG_DT, MPHO
+		FROM TVL_MEMBS
+
+		ORDER BY MNO DESC
+
+		LIMIT #{startIndex}, #{length}
+	</select>
+	
+	<select id="regUserPhoto" resultMap="memberMap" parameterType="int">
+		SELECT MNO, MNM, EMAIL,
+		BIR_DT, GEND, REG_DT, MPHO
+		FROM TVL_MEMBS
+		WHERE MNO=#{value}
+	</select>
+	
+ <select id="checkEmail" resultMap="memberMap" parameterType="String">
+    SELECT EMAIL FROM TVL_MEMBS
+    WHERE EMAIL = #{value}
+  </select>
+
+
+	<select id="selectOne" resultMap="memberMap" parameterType="int">
+		SELECT MNO, MNM, EMAIL,
+		BIR_DT, GEND, REG_DT, MPHO
+		FROM TVL_MEMBS
+		WHERE
+		MNO = #{value}
+	</select>
+
+	<select id="selectOneByPassword" resultMap="memberMap" parameterType="map">
+		SELECT MNO, MNM, EMAIL,
+		BIR_DT, GEND, REG_DT, MPHO
+		FROM
+		TVL_MEMBS
+		WHERE MNO=#{no} AND PWD=PASSWORD(#{password})
+	</select>
+	
+	  <select id="selectOneByEmailAndPassword" resultMap="memberMap" parameterType="map">
+    SELECT MNO, MNM, EMAIL,
+    BIR_DT, GEND, REG_DT, MPHO
+    FROM
+    TVL_MEMBS
+    WHERE EMAIL=#{email} AND PWD=PASSWORD(#{password})
+  </select>
+
+
+
+	<update id="update" parameterType="member">
+		UPDATE TVL_MEMBS SET
+		MNM=#{name},
+		EMAIL=#{email},
+		BIR_DT=#{birthday},
+		MPHO=#{memberPhoto}
+
+		WHERE MNO=#{no}
+	</update>
+
+	<delete id="delete" parameterType="int">
+		DELETE FROM TVL_MEMBS
+		WHERE
+		MNO=#{value}
+	</delete>
+
+</mapper>

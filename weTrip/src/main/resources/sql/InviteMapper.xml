@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.dao.InviteDao">
+  <resultMap type="invite" id="inviteMap">
+    <id column="IVNO" property="inviteNo"/>
+ 		<result column="MNO" property="memberNo"/>
+ 		<result column="MNO2" property="memberNo2"/>
+	    <result column="INVNM" property="inviteName"/>
+	    <result column="INVEMAIL" property="inviteEmail"/>
+	    <result column="INVGEND" property="inviteGender"/>
+	    <result column="STAT" property="state"/>
+	    <result column="INVPHO" property="invitePhoto"/>
+	    <result column="IVBNO" property="inviteBoardNo"/>  
+     	
+  </resultMap>
+  
+  <insert id="insert" parameterType="invite" >
+    INSERT INTO TVL_INVIT(MNO,MNO2,INVNM,INVEMAIL,INVGEND,STAT,INVPHO,IVBNO) 
+    	VALUES(#{memberNo},#{memberNo2},#{inviteName},#{inviteEmail},#{inviteGender},0,#{invitePhoto},#{inviteBoardNo})
+  </insert>
+  
+  <insert id="inviteAgreeInsert" parameterType="invite" >
+    INSERT INTO TVL_INVIT(MNO,MNO2,INVNM,INVEMAIL,INVGEND,STAT,INVPHO,IVBNO) 
+    	VALUES(#{memberNo},#{memberNo2},#{inviteName},#{inviteEmail},#{inviteGender},1,#{invitePhoto},#{inviteBoardNo})
+  </insert>
+  
+  <select id="inviteCheck" resultType="int" parameterType="int">
+    SELECT COUNT(*) FROM TVL_INVIT 
+    WHERE MNO=#{memberNo} AND MNO2=#{memberNo2}
+  </select>
+  
+   <select id="inviteCount" resultType="int" parameterType="int">
+    SELECT  COUNT(*) FROM TVL_INVIT 
+    WHERE MNO2=#{value} AND STAT=0
+  </select>
+  
+  <select id="inviteList" resultMap="inviteMap" parameterType="int">
+    SELECT  * FROM TVL_INVIT 
+    	WHERE MNO2=#{value} AND STAT=0    
+  </select>
+  
+  
+  <update id="inviteAgree" parameterType="int">
+    UPDATE TVL_INVIT SET 
+      STAT=1
+    WHERE IVNO=#{inviteNo}
+  </update>
+  
+  <update id="inviteRefuse" parameterType="int">
+    UPDATE TVL_INVIT SET 
+      STAT=3
+    WHERE IVNO=#{inviteNo}
+  </update>
+  
+  <select id="inviteAgreeList" resultMap="inviteMap" parameterType="int">
+    SELECT  * FROM TVL_INVIT 
+    	WHERE MNO2=#{value} AND STAT=1    
+  </select>
+</mapper>
+

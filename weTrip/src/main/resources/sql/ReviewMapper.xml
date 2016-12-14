@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.dao.ReviewDao">
+  <resultMap type="review" id="reviewMap">
+    <id column="rbno" property="reviewboardno"/> 
+    <result column="tmno" property="travelno"/>
+    <result column="mno" property="memberno"/> 
+    <result column="mnm" property="membername"/>
+    <result column="title" property="title"/>
+    <result column="cont" property="content"/>
+    <result column="cre_dt" property="createdDate"/>
+    <result column="vw_cnt" property="viewcount"/>
+    <result column="count(c.rbno)" property="commentCount"/>
+  </resultMap>
+  
+  
+  <select id="selectList" resultMap="reviewMap" parameterType="map">
+    SELECT R.RBNO,R.TMNO,R.MNO,M.MNM,R.TITLE,R.CONT,DATE_FORMAT(R.CRE_DT,'%Y-%m-%d') AS CRE_DT ,R.VW_CNT , COUNT(C.RBNO)
+    FROM TVL_REVIEW_BODS R
+	INNER JOIN TVL_MEMBS M 
+	ON R.MNO=M.MNO
+	LEFT JOIN TVL_REVIEW_COMT C
+	ON R.RBNO=C.RBNO
+	GROUP BY R.RBNO
+ 	ORDER BY RBNO DESC  
+ 	
+ 	LIMIT #{startIndex}, #{length}
+  </select>
+  
+  <select id="selectOne" resultMap="reviewMap" parameterType="int">
+    SELECT  RBNO,TMNO,R.MNO,MNM,TITLE,CONT,CRE_DT,VW_CNT
+    FROM TVL_REVIEW_BODS R
+	INNER JOIN TVL_MEMBS M 
+	ON R.MNO=M.MNO
+    WHERE RBNO = #{value}
+  </select>
+  
+  <select id="detailReviewList" resultMap="reviewMap" parameterType="int">
+    SELECT R.RBNO,R.TMNO,R.MNO,M.MNM,R.TITLE,R.CONT,DATE_FORMAT(R.CRE_DT,'%Y-%m-%d') AS CRE_DT,R.VW_CNT , COUNT(C.RBNO)
+    FROM TVL_REVIEW_BODS R
+	INNER JOIN TVL_MEMBS M 
+	ON R.MNO=M.MNO
+	LEFT JOIN TVL_REVIEW_COMT C
+	ON R.RBNO=C.RBNO
+	WHERE TMNO=#{value}
+	GROUP BY R.RBNO
+ 	ORDER BY RBNO DESC  
+ 	
+  </select>
+  
+  <select id="selectOneByMember" resultMap="reviewMap" parameterType="int">
+    SELECT  RBNO,TMNO,R.MNO,MNM,TITLE,CONT,CRE_DT
+    FROM TVL_REVIEW_BODS R 
+    INNER JOIN TVL_MEMBS M
+    ON R.MNO=M.MNO
+    WHERE R.MNO = #{value}
+    ORDER BY RBNO DESC
+  </select>
+  
+  <select id="selectOneByPassword" resultMap="reviewMap" parameterType="map">
+    SELECT NO,TITLE,CONTS,CRE_DT,VW_CNT 
+    FROM BOARDS 
+    WHERE NO=#{no} AND PASSWORD=PASSWORD(#{password})
+  </select>
+  
+  <insert id="insert"  parameterType="review" useGeneratedKeys="true" keyProperty="reviewboardno" keyColumn="rbno">
+    INSERT INTO TVL_REVIEW_BODS(TMNO,MNO,TITLE, CONT, CRE_DT,VW_CNT)
+    VALUES(#{travelno},#{memberno},#{title}, #{content},  NOW(),0)
+  </insert>
+  
+  <update id="update" parameterType="review">
+    UPDATE TVL_REVIEW_BODS SET 
+      TITLE=#{title}, 
+      CONT=#{content} 
+    WHERE RBNO=#{reviewboardno}
+  </update>
+  
+  <update id="viewCountUpdate" parameterType="int">
+    UPDATE TVL_REVIEW_BODS SET 
+      VW_CNT=VW_CNT+1
+    	WHERE RBNO=#{reviewboardno}
+  </update>
+  
+  <delete id="delete" parameterType="int">
+    DELETE FROM TVL_REVIEW_BODS 
+    WHERE RBNO=#{value}
+  </delete>
+  
+  <select id="countAll" resultType="int">
+    SELECT  COUNT(*)
+    FROM TVL_REVIEW_BODS 
+  </select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

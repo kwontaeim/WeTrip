@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.dao.TravelMainDao">
+  <resultMap type="travelMain" id="travelMainMap">
+    <id column="TMNO" property="travelMainNo"/> 
+    <result column="MNO" property="memberNo"/>
+    <result column="SF_INF" property="selfIntroduce"/>
+  </resultMap>
+  
+  <insert id="insert" parameterType="travelMain" useGeneratedKeys="true" keyProperty="travelMainNo" keyColumn="TMNO">
+    INSERT INTO TVL_TVLMAIN(MNO, TITLE, SF_INF)
+    VALUES(#{memberNo},#{title}, #{selfIntroduce});
+  </insert>
+  
+  <update id="update" parameterType="travelMain">
+   UPDATE TVL_TVLMAIN SET 
+     TITLE=#{title}, 
+     SF_INF=#{selfIntroduce} 
+   WHERE TMNO=#{travelMainNo}
+ </update>
+ 
+ <delete id="delete" parameterType="int">
+  DELETE FROM TVL_TVLMAIN 
+  WHERE TMNO=#{value}
+ </delete>
+</mapper>

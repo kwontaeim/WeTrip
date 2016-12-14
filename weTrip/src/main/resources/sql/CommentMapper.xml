@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.dao.CommentDao">
+  <resultMap type="comment" id="commentMap">
+    <id column="rcno" property="reviewcommentNo"/>
+ 		<result column="rbno" property="reviewboardNo"/>
+	    <result column="mno" property="memberNo"/>
+	    <result column="mnm" property="memberName"/> 
+	    <result column="mpho" property="cmMemberPhoto"/> 
+	    <result column="cont" property="content"/>
+	    <result column="cre_dt" property="createdDate"/>  
+     
+  </resultMap>
+  
+  <select id="selectList2" resultMap="commentMap" parameterType="int">
+  SELECT RCNO,RBNO,C.MNO,MNM,MPHO, CONT,DATE_FORMAT(CRE_DT, '%y-%m-%d %H:%i') AS CREATEDDATE2 
+  FROM TVL_REVIEW_COMT C
+  INNER JOIN TVL_MEMBS M 
+  ON M.MNO=C.MNO
+  WHERE RBNO =#{value}
+  ORDER BY RCNO DESC
+  	
+  </select> 
+  
+  
+  
+  <insert id="insert" parameterType="comment" >
+    INSERT INTO TVL_REVIEW_COMT(RBNO,MNO,CONT,CRE_DT)
+    VALUES(#{reviewboardNo},#{memberNo}, #{content},NOW())
+  </insert>
+  
+  
+  <update id="update" parameterType="comment">
+    UPDATE TVL_REVIEW_COMT SET 
+      CONT=#{content} 
+    WHERE RCNO=#{reviewcommentNo}
+  </update>
+  
+  <delete id="delete" parameterType="int">
+    DELETE FROM TVL_REVIEW_COMT 
+    WHERE RCNO=#{value}
+  </delete>
+  
+  <select id="countAll" parameterType="int" resultType="int">
+    SELECT  COUNT(RBNO)
+    FROM TVL_REVIEW_COMT
+    WHERE RBNO={value} 
+  </select>
+</mapper>
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.dao.ReviewPhotoDao">
+  <resultMap type="reviewPhoto" id="reviewPhotoMap">
+    <id column="rpno" property="reviewPhotoNo"/> 
+    <result column="rbno" property="reviewBoardNo"/>
+    <result column="rpnm" property="reviewPhotoName"/>
+  </resultMap>
+  
+  <insert id="insert" parameterType="reviewPhoto" >
+    INSERT INTO TVL_REVIEW_PHO(RBNO, RPNM)
+    VALUES(#{reviewBoardNo}, #{reviewPhotoName})
+  </insert>
+  
+  <select id="photoList" resultMap="reviewPhotoMap" parameterType="int">
+    SELECT * FROM TVL_REVIEW_PHO
+    WHERE RBNO=#{value}
+  </select>
+  
+  <delete id="delete" parameterType="int">
+    DELETE FROM TVL_REVIEW_PHO
+    WHERE RBNO=#{value}
+  </delete>
+</mapper>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.dao.RegistFormDao">
+  <resultMap type="RegistForm" id="registFormMap">
+    <id column="SCHNO" property="no"/> 
+    <result column="MNO" property="memberNo"/>
+    <result column="TMNO" property="travelMainNo"/>
+    <result column="LOCNO" property="locationNo"/>
+    <result column="STYNO" property="styleNo"/>
+    <result column="MNM" property="writer"/>
+    <result column="TITLE" property="title"/>
+    <result column="STYNM" property="styleName"/>
+    <result column="CONT" property="continent"/>
+    <result column="NATN" property="nation"/>
+    <result column="CITY" property="city"/>
+    <result column="SF_INF" property="selfIntroduce"/>
+    <result column="ST_DT" property="startDate"/>
+    <result column="ED_DT" property="endDate"/>
+    <result column="MPHO" property="myPhoto"/>
+    <result column="IPNM" property="travelPhoto"/>
+    <result column="COUNT(TVL_BMK.TMNO)" property="bookmarkCount"/>
+  </resultMap>
+  
+<select id="selectList" resultMap="registFormMap" parameterType="map">
+SELECT TVL_TVLMAIN.TMNO, SCHNO, TVL_TVLMAIN.MNO, CITY, ST_DT, ED_DT, IPNM, MPHO, TITLE, MNM FROM TVL_TVLMAIN
+INNER JOIN TVL_MEMBS
+ON TVL_MEMBS.MNO = TVL_TVLMAIN.MNO
+INNER JOIN TVL_SCH
+ON TVL_SCH.TMNO = TVL_TVLMAIN.TMNO
+INNER JOIN TVL_MYSTY
+ON TVL_MYSTY.TMNO = TVL_TVLMAIN.TMNO
+INNER JOIN TVL_LOC
+ON TVL_LOC.LOCNO = TVL_SCH.LOCNO
+INNER JOIN TVL_STY
+ON TVL_STY.STYNO = TVL_MYSTY.STYNO
+INNER JOIN TVL_INTRO_PHO
+ON TVL_TVLMAIN.TMNO = TVL_INTRO_PHO.TMNO
+WHERE SCHNO IN (
+SELECT MAX(SCHNO) FROM TVL_TVLMAIN
+INNER JOIN TVL_MEMBS
+ON TVL_MEMBS.MNO = TVL_TVLMAIN.MNO
+INNER JOIN TVL_SCH
+ON TVL_SCH.TMNO = TVL_TVLMAIN.TMNO
+INNER JOIN TVL_MYSTY
+ON TVL_MYSTY.TMNO = TVL_TVLMAIN.TMNO
+INNER JOIN TVL_LOC
+ON TVL_LOC.LOCNO = TVL_SCH.LOCNO
+INNER JOIN TVL_STY
+ON TVL_STY.STYNO = TVL_MYSTY.STYNO
+INNER JOIN TVL_INTRO_PHO
+ON TVL_TVLMAIN.TMNO = TVL_INTRO_PHO.TMNO
+GROUP BY TVL_TVLMAIN.TMNO
+)
+AND
+IPNO IN (
+SELECT MAX(IPNO) FROM TVL_TVLMAIN
+INNER JOIN TVL_MEMBS
+ON TVL_MEMBS.MNO = TVL_TVLMAIN.MNO
+INNER JOIN TVL_SCH
+ON TVL_SCH.TMNO = TVL_TVLMAIN.TMNO
+INNER JOIN TVL_MYSTY
+ON TVL_MYSTY.TMNO = TVL_TVLMAIN.TMNO
+INNER JOIN TVL_LOC
+ON TVL_LOC.LOCNO = TVL_SCH.LOCNO
+INNER JOIN TVL_STY
+ON TVL_STY.STYNO = TVL_MYSTY.STYNO
+INNER JOIN TVL_INTRO_PHO
+ON TVL_TVLMAIN.TMNO = TVL_INTRO_PHO.TMNO
+GROUP BY TVL_TVLMAIN.TMNO
+)
+ORDER BY TVL_TVLMAIN.TMNO DESC
+LIMIT #{length}
+</select>
+
+<select id="afterSearchList" resultMap="registFormMap" parameterType="map">
+SELECT TVL_TVLMAIN.TMNO, SCHNO, TVL_TVLMAIN.MNO, CITY, ST_DT, ED_DT, IPNM, MPHO, TITLE, MNM FROM TVL_TVLMAIN
+INNER JOIN TVL_MEMBS
+ON TVL_MEMBS.MNO = TVL_TVLMAIN.MNO
+INNER JOIN TVL_SCH
+ON TVL_SCH.TMNO = TVL_TVLMAIN.TMNO
+INNER JOIN TVL_MYSTY
+ON TVL_MYSTY.TMNO = TVL_TVLMAIN.TMNO
+INNER JOIN TVL_LOC
+ON TVL_LOC.LOCNO = TVL_SCH.LOCNO
+INNER JOIN TVL_STY
+ON TVL_STY.STYNO = TVL_MYSTY.STYNO
+INNER JOIN TVL_INTRO_PHO
+ON TVL_TVLMAIN.TMNO = TVL_INTRO_PHO.TMNO
+WHERE CITY LIKE CONCAT('%', #{searchCity}, '%')
+AND ST_DT >= #{searchSartDate}
+AND ED_DT <![CDATA[<=]]> #{searchEndDate}
+ORDER BY TVL_TVLMAIN.TMNO DESC
+</select>
+
+<select id="selectOne" resultMap="registFormMap" parameterType="int">
+
+SELECT  TVL_INTRO_PHO.IPNO, IPNM, TVL_MEMBS.MNO, TVL_TVLMAIN.TMNO, TITLE, MNM, TVL_STY.STYNO, STYNM, SF_INF,  MPHO
+FROM TVL_TVLMAIN
+INNER JOIN TVL_MEMBS
+ON TVL_MEMBS.MNO = TVL_TVLMAIN.MNO
+INNER JOIN TVL_MYSTY
+ON TVL_MYSTY.TMNO = TVL_TVLMAIN.TMNO
+INNER JOIN TVL_STY
+ON TVL_STY.STYNO = TVL_MYSTY.STYNO
+INNER JOIN TVL_INTRO_PHO
+ON TVL_TVLMAIN.TMNO = TVL_INTRO_PHO.TMNO
+WHERE TVL_TVLMAIN.TMNO = #{value}
+</select>
+
+<select id="autoComplecation" resultMap="registFormMap" parameterType="map">
+SELECT DISTINCT CITY FROM TVL_LOC
+</select>
+</mapper>

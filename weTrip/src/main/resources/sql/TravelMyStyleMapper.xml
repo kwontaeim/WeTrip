@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.dao.TravelMyStyleDao">
+  
+  <insert id="insert" parameterType="travelMain">
+    INSERT INTO TVL_MYSTY(TMNO,STYNO)
+    VALUES(#{travelMainNo},#{styleNo});
+  </insert>
+  
+<update id="update" parameterType="travelMain">
+  UPDATE TVL_MYSTY SET 
+    TMNO=#{travelMainNo},
+    STYNO=#{styleNo}
+  WHERE TMNO=#{travelMainNo}
+</update>
+
+ <delete id="delete" parameterType="int">
+  dELETE FROM TVL_MYSTY 
+  WHERE TMNO=#{travelMainNo}
+ </delete>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

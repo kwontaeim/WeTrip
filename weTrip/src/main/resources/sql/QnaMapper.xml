@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.dao.QnaDao">
+  <resultMap type="qna" id="qnaMap">
+  
+       <id column="QBNO" property="qno"/> 
+    <result column="MNO" property="no"/>
+    <result column="MNO" property="comMemberNo"/>
+    <result column="TQCNO" property="qcno"/>
+    <result column="TITLE" property="title"/>
+     <result column="CONT" property="contents"/>
+     <result column="CONT" property="commentContents"/>
+    <result column="CRE_DT" property="createDate"/>
+    <result column="CRE_DT" property="cmtCreateDate"/>
+    <result column="VW_CNT" property="viewCount"/>
+    <result column="MNM" property="memberName"/>
+    <result column="count(qcno)" property="commentCount"/>
+  </resultMap>
+  
+
+  
+  
+<select id="selectList" resultMap="qnaMap" parameterType="map">
+SELECT TVL_QNA_BODS.QBNO, TVL_QNA_BODS.MNO, MNM, TVL_QNA_BODS.TITLE, COUNT(QCNO),
+DATE_FORMAT(TVL_QNA_BODS.CRE_DT,'%Y-%m-%d')AS CRE_DT, TVL_QNA_BODS.VW_CNT
+FROM TVL_QNA_BODS
+INNER JOIN TVL_MEMBS
+ON TVL_MEMBS.MNO = TVL_QNA_BODS.MNO
+LEFT JOIN TVL_QNA_COMT
+ON TVL_QNA_COMT.QBNO = TVL_QNA_BODS.QBNO
+GROUP BY TVL_QNA_BODS.QBNO
+ORDER BY QBNO DESC
+LIMIT #{startIndex}, #{length}
+</select>
+
+<select id="qnaSearch" resultMap="qnaMap" parameterType="qna">
+SELECT TVL_QNA_BODS.QBNO, TVL_QNA_BODS.MNO, MNM, TVL_QNA_BODS.TITLE, COUNT(QCNO),
+DATE_FORMAT(TVL_QNA_BODS.CRE_DT,'%Y-%m-%d')AS CRE_DT, TVL_QNA_BODS.VW_CNT
+FROM TVL_QNA_BODS
+INNER JOIN TVL_MEMBS
+ON TVL_MEMBS.MNO = TVL_QNA_BODS.MNO
+LEFT JOIN TVL_QNA_COMT
+ON TVL_QNA_COMT.QBNO = TVL_QNA_BODS.QBNO
+WHERE TVL_QNA_BODS.TITLE LIKE CONCAT('%', #{title}, '%')
+GROUP BY TVL_QNA_BODS.QBNO
+ORDER BY QBNO DESC
+</select>
+
+
+<select id="selectOne" resultMap="qnaMap" parameterType="int">
+SELECT QBNO, MNM, TVL_QNA_BODS.MNO, TITLE, CONT, CRE_DT, VW_CNT
+FROM TVL_QNA_BODS
+INNER JOIN TVL_MEMBS ON TVL_MEMBS.MNO = TVL_QNA_BODS.MNO
+WHERE QBNO = #{value}
+</select>
+
+
+
+<insert id="insert" parameterType="qna"  useGeneratedKeys="true" keyProperty="qno">
+  INSERT INTO TVL_QNA_BODS(MNO, TITLE, CONT, CRE_DT, VW_CNT)
+  VALUES(#{no}, #{title}, #{contents}, NOW(), 0)
+  
+
+</insert>
+
+<update id="update" parameterType="qna">
+  UPDATE TVL_QNA_BODS SET 
+    TITLE=#{title}, 
+    CONT=#{contents} 
+  WHERE QBNO=#{qno}
+</update>
+
+<update id="viewCountUpdate" parameterType="int">
+  UPDATE TVL_QNA_BODS SET 
+    VW_CNT=VW_CNT+1
+  WHERE QBNO=#{qno}
+</update>
+
+<delete id="delete" parameterType="int">
+  DELETE FROM TVL_QNA_BODS
+  WHERE QBNO=#{value}
+</delete>
+
+<select id="countAll" resultType="int">
+  SELECT  COUNT(*)
+  FROM TVL_QNA_BODS 
+</select>  
+
+</mapper>

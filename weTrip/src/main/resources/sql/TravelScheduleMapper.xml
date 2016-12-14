@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.dao.TravelScheduleDao">
+<resultMap type="travelMain" id="travelMainMap">
+  <id column="TMNO" property="travelMainNo" />
+    <result column="SCHNO" property="scheduleNo" />
+    <result column="LOCNO" property="locationNo" />
+    <result column="ST_DT" property="startDate" />
+    <result column="ED_DT" property="endDate" />
+    <result column="CONT" property="continent" />
+    <result column="NATN" property="nation" />
+    <result column="CITY" property="city" />
+    <result column="LAT" property="lat" />
+    <result column="LNG" property="lng" />
+    </resultMap>
+
+  <select id="selectMySchedule" resultMap="travelMainMap" parameterType="map">
+    SELECT TVL_SCH.SCHNO, TVL_SCH.TMNO, TVL_SCH.LOCNO, ST_DT, ED_DT, CONT, NATN, CITY, LAT, LNG FROM TVL_SCH
+    INNER JOIN TVL_LOC
+    ON TVL_SCH.LOCNO = TVL_LOC.LOCNO
+    WHERE TMNO = #{travelPostNo}
+  </select>
+  
+  <insert id="insert" parameterType="travelMain" >
+    INSERT INTO TVL_SCH(TMNO,LOCNO,ST_DT,ED_DT)
+    VALUES(#{travelMainNo},#{locationNo}, #{startDate},#{endDate});
+  </insert>
+  
+  <update id="update" parameterType="travelMain">
+  UPDATE TVL_SCH SET 
+    TMNO=#{travelMainNo},
+    LOCNO=#{locationNo},
+    ST_DT=#{startDate},
+    ED_DT=#{endDate}
+  WHERE SCHNO=#{scheduleNo}
+</update>
+
+ <delete id="delete" parameterType="int">
+  DELETE FROM TVL_SCH 
+  WHERE SCHNO=#{scheduleNo}
+ </delete>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
