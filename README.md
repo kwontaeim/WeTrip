@@ -1,2 +1,2 @@
 # weTrip
-bitcamp project
+Nov 2016 Bitcamp project
