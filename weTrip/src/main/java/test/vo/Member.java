@@ -4,117 +4,110 @@ import java.io.Serializable;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 
-public class Member implements Serializable{
-  
+public class Member implements Serializable {
 
+	private static final long serialVersionUID = 1L;
+	static SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
-  private static final long serialVersionUID = 1L;
-  static SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-  
-  protected int no;
-  protected String name;
-  protected String email;
-  protected String password;
-  protected Date birthday;
-  protected int gender;
-  protected Date registedDate;
-  protected String memberPhoto;
-  protected int memberRequest;
-  
-  protected String registedDate1;
+	protected int no;
+	protected String name;
+	protected String email;
+	protected String password;
+	protected Date birthday;
+	protected int gender;
+	protected Date registedDate;
+	protected String memberPhoto;
+	protected int memberRequest;
 
-  
+	protected String registedDate1;
 
+	public int getNo() {
+		return no;
+	}
 
+	public void setNo(int no) {
+		this.no = no;
+	}
 
-  public int getNo() {
-    return no;
-  }
+	public String getName() {
+		return name;
+	}
 
-  public void setNo(int no) {
-    this.no = no;
-  }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-  public String getName() {
-    return name;
-  }
+	public String getEmail() {
+		return email;
+	}
 
-  public void setName(String name) {
-    this.name = name;
-  }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-  public String getEmail() {
-    return email;
-  }
+	public String getPassword() {
+		return password;
+	}
 
-  public void setEmail(String email) {
-    this.email = email;
-  }
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-  public String getPassword() {
-    return password;
-  }
+	public Date getBirthday() {
+		return birthday;
+	}
 
-  public void setPassword(String password) {
-    this.password = password;
-  }
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
 
-  public Date getBirthday() {
-    return birthday;
-  }
+	public int getGender() {
+		return gender;
+	}
 
-  public void setBirthday(Date birthday) {
-    this.birthday = birthday;
-  }
+	public void setGender(int gender) {
+		this.gender = gender;
+	}
 
-  public int getGender() {
-    return gender;
-  }
+	public Date getRegistedDate() {
+		return registedDate;
+	}
 
-  public void setGender(int gender) {
-    this.gender = gender;
-  }
+	public void setRegistedDate(Date registedDate) {
+		this.registedDate = registedDate;
+		this.registedDate1 = format.format(registedDate);
+	}
 
-  public Date getRegistedDate() {
-    return registedDate;
-  }
+	public String getMemberPhoto() {
+		return memberPhoto;
+	}
 
-  public void setRegistedDate(Date registedDate) {
-    this.registedDate = registedDate;
-    this.registedDate1 = format.format(registedDate);
-  }
+	public void setMemberPhoto(String memberPhoto) {
+		this.memberPhoto = memberPhoto;
+	}
 
-  public String getMemberPhoto() {
-    return memberPhoto;
-  }
+	public int getMemberRequest() {
+		return memberRequest;
+	}
 
-  public void setMemberPhoto(String memberPhoto) {
-    this.memberPhoto = memberPhoto;
-  }
+	public void setMemberRequest(int memberRequest) {
+		this.memberRequest = memberRequest;
+	}
 
-  public int getMemberRequest() {
-    return memberRequest;
-  }
+	public String getRegistedDate1() {
+		return registedDate1;
+	}
 
-  public void setMemberRequest(int memberRequest) {
-    this.memberRequest = memberRequest;
-  }
+	public void setRegistedDate(String str) {
+		this.registedDate = Date.valueOf(str);
+		this.registedDate1 = str;
+	}
 
-  public String getRegistedDate1() {
-    return registedDate1;
-  }
-
-  public void setRegistedDate(String str) {
-    this.registedDate = Date.valueOf(str);
-    this.registedDate1 = str;
-  }
-
-  @Override
-  public String toString() {
-    return "Member [no=" + no + ", name=" + name + ", email=" + email + ", password=" + password + ", birthday="
-        + birthday + ", gender=" + gender + ", registedDate=" + registedDate + ", memberPhoto=" + memberPhoto
-        + ", memberRequest=" + memberRequest + ", registedDate1=" + registedDate1 + "]";
-  }
-
+	@Override
+	public String toString() {
+		return "Member [no=" + no + ", name=" + name + ", email=" + email + ", password=" + password + ", birthday="
+				+ birthday + ", gender=" + gender + ", registedDate=" + registedDate + ", memberPhoto=" + memberPhoto
+				+ ", memberRequest=" + memberRequest + ", registedDate1=" + registedDate1 + "]";
+	}
 
 }

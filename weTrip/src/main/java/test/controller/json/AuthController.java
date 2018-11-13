@@ -85,9 +85,7 @@ public class AuthController {
 
   @RequestMapping(path="loginUser")
   public Object loginUser(HttpSession session) throws Exception {
-    
-    
-    
+     
     try {
       Member member = (Member)session.getAttribute("member");
       if (member == null) {
@@ -108,9 +106,7 @@ public class AuthController {
   
   @RequestMapping(path="regUserPhoto")
   public Object regUserPhoto(int no,HttpSession session) throws Exception {
-    
-    
-    
+  
     try {
       
       System.out.println(no);
@@ -122,13 +118,3 @@ public class AuthController {
   }
 
 }
-
-
-
-
-
-
-
-
-
-
