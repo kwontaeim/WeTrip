@@ -6,12 +6,9 @@
 <!--  travel 에서 가저온 시-->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-<meta name="description" content="Blueprint: On-Scroll Animated Header"/>
-<meta name="keywords" content="fixed header, animatied header, javascript, wed design, template, on scroll"/>
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css"/>
 <link rel="stylesheet" type="text/css" href="css/component.css"/>
 <link rel="stylesheet" type="text/css" href="css/main_index.css"/>
-<link rel="stylesheet" href="css/leaflet.css">
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 <!-- 합쳐지고 최소화된 최신 CSS -->
@@ -33,24 +30,24 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js"></script>
 </head>
 <!-- 페이지로딩 -->
-<body class="landing">
+<body>
 <!-- 상단메뉴시작 -->
 <!-- Start of container2 -->
 <div class="container">
 	<div class="upper">
 		<div class='zeta-menu-bar my-login'>
 			<ul class="zeta-menu">
-				<li><a href="#2"><img src='img/iconmonstr-user-20-240.png' class="mainImg my-login"></a><a id="requestCountAll"></a>
+				<li><a href="#2"><img src='img/icon-user-20-240.png' class="mainImg my-login"></a><a id="requestCountAll"></a>
 				<ul>
-					<li><a href="#" id="myInfo"><img src='img/iconmonstr-note-19-240.png' id="subImg"><br>
+					<li><a href="#" id="myInfo"><img src='img/icon-note-19-240.png' id="subImg"><br>
 					MY INFO</a>
 					</li>
-					<li><a href="#" id="travelerMessage"><img src='img/iconmonstr-email-2-240.png' id="subImg"><br>
+					<li><a href="#" id="travelerMessage"><img src='img/icon-email-2-240.png' id="subImg"><br>
 					MESSAGE</a>
 					</li>
-					<li><a class=" fadeandscale_open" id="accompany" href="#"><img src='img/iconmonstr-user-21-240.png' id="subImg"><br>
+					<li><a class=" fadeandscale_open" id="accompany" href="#"><img src='img/icon-user-21-240.png' id="subImg"><br>
 					ACCOMPANY</a></li>
-					<li><a id="logoutBtn" href='#'><img src='img/iconmonstr-log-out-9-240.png' id="subImg"><br>
+					<li><a id="logoutBtn" href='#'><img src='img/icon-log-out-9-240.png' id="subImg"><br>
 					LOGOUT</a>
 					</li>
 				</ul>
@@ -72,16 +69,13 @@
 	<div class="cbp-af-inner">
 		<div style="height: 0px;">
 			<img src='img/passport.png' style="float: left; width: 55px; height: 55px;">
-			<h1 id="title_txt"><a href="n_mainTest.html">WE TRIP</a></h1>
+			<h1 id="title_txt"><a href="index.html">WE TRIP</a></h1>
 		</div>
 		<nav id="menu_nav" style="border:0px solid black; margin-right: 10px;">
 		<a href="#" id="travelerPage">Accompany</a><a href="#" id="reviewPage">Review</a><a href="#" id="qnaPage">Q&A</a>
 		</nav>
 	</div>
 </div>
-<!--  test test -->
-<!-- center  ---->
-<!--  test test -->
 <!-- center  ---->
 <div class="main">
 </div>
@@ -244,7 +238,7 @@
 		<section class="tiles" style=" margin-top: 0px;margin: 0 auto;padding-left: 1.5%;padding-top: 3%;;background-color: #f0f0f0;padding-bottom: 0.9%;">
 		<article class="style1" style="height:23%; width:23%;margin: 13px;">
 		<span class="image" style="width:100%;margin:0; padding:0;">
-		<img src="mini_main17.jpg" alt=""/>
+		<img src="img/mini_main17.jpg" alt=""/>
 		</span>
 		<a href="" class="travelerList">
 		<h2>ACCOMPANY</h2>
@@ -257,7 +251,7 @@
 		</article>
 		<article class="style2" style="height:23%; width:23%;margin: 13px;">
 		<span class="image">
-		<img src="mini_main10.jpg" alt=""/>
+		<img src="img/mini_main10.jpg" alt=""/>
 		</span>
 		<a href="#" class="reviewPage">
 		<h2>REVIEW</h2>
@@ -270,7 +264,7 @@
 		</article>
 		<article class="style3" style="height:23%; width:23%;margin: 13px;">
 		<span class="image">
-		<img src="mini_main12.jpg" alt=""/>
+		<img src="img/mini_main12.jpg" alt=""/>
 		</span>
 		<a href="#" class="travelerList">
 		<h2>PLAN</h2>
@@ -283,7 +277,7 @@
 		</article>
 		<article class="style4" style="height:23%; width:23%;margin: 13px;">
 		<span class="image">
-		<img src="mini_main15.jpg" alt=""/>
+		<img src="img/mini_main15.jpg" alt=""/>
 		</span>
 		<a href="#" class="qnaPage">
 		<h2>Q&A</h2>
@@ -306,14 +300,14 @@
 <div id="footer" style="background-color: white; ">
 	<br>
 	<div style="width: 65%; margin: 0 auto; text-align: center;">
-		<h2 style="margin-top: 0 !important;"><img src="logo.png" alt="로고파일자리" width="96"/></h2>
+		<h2 style="margin-top: 0 !important;"><img src="img/logo.png" alt="로고파일자리" width="96"/></h2>
 		<address>
 		<span>서내와기요미들</span><span class="line">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span>이곳은 회사 주소가 들어가야되지만 백수이므로 주소를적을수 없다</span><br>
 		<span>사업자등록번호 : (이곳은사업자번호란)</span><span class="line">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span>TEL : 010-5321-8633</span><span class="line">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span>제휴문의 : java85@bit.com</span><br>
 		<span>COPYRIGHT© 2016 GD2723. ALL RIGHTS RESERVED.</span>
 		</address>
 		<div class="btn_sns">
-			<a href="https://www.instagram.com/travel_bit/" title="인스타그램 바로가기" target="_blank"><img src="sns_icon01.png" alt="인스타그램 바로가기" width="36"/></a>
+			<a href="https://www.instagram.com/travel_bit/" title="인스타그램 바로가기" target="_blank"><img src="img/sns_icon01.png" alt="인스타그램 바로가기" width="36"/></a>
 		</div>
 	</div>
 	<br>

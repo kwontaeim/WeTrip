@@ -102,9 +102,10 @@ window.fbAsyncInit = function() {
 	  });
 
 	};
+	
 var checktheNo;
-function ajaxLoginUser() {
 
+function ajaxLoginUser() {
 	$.getJSON("loginUser.json", function(obj) {
 		var result = obj.jsonResult
 		if (result.state != "success") {
@@ -128,14 +129,12 @@ function ajaxLoginUser() {
 		$("#requestCountAll").text(result.data.memberRequest)
 		console.log(result.data.memberRequest)
 		if (result.data.memberPhoto == null) {
-			$(".mainImg").attr("src","img/iconmonstr-user-20-240.png");
+			$(".mainImg").attr("src","img/icon-user-20-240.png");
 		} else if (result.data.memberPhoto.substring(0,1) == 'h') {
 			$(".mainImg").attr("src",result.data.memberPhoto);
 		} else {
 		$(".mainImg").attr("src","../upload/" + result.data.memberPhoto);
 		}
-//		$("#detailUserImage").attr("src","../upload/" + result.data.memberPhoto);
-
 		$("#myInfo").click(function(event) {
 			ajaxLoginUser()
 

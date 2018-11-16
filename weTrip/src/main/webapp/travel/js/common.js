@@ -1,3 +1,3 @@
 
-var serverAddr = "http://localhost:8080/weTrip"
-//var serverAddr = "http://t1.java85.com:8080/Project"
+var serverAddr = "http://localhost:8180/weTrip" // local
+//var serverAddr = " http://35.177.171.2:8080/" // AWS
