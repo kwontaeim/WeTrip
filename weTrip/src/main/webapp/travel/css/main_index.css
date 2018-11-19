@@ -57,7 +57,7 @@ font-size:15px;
 font-weight:700;
 height:25px;
 line-height:24px;
-margin-bottom:10px;
+margin-bottom:0;
 position:absolute;
 text-align:center;
 text-decoration:none;
@@ -201,7 +201,6 @@ width:100%!important;
 }
 
 .video-js {
-background:#000;
 padding:0;
 position:absolute;
 vertical-align:middle;
@@ -222,7 +221,8 @@ font-size:12px;
 line-height:1;
 margin:0 auto;
 padding:100px 0;
-position:relative;
+position:absolute;
+width:100%;
 z-index:0;
 }
 
@@ -305,7 +305,7 @@ color:#fff;
 
 .btn {
 background:#1e4147;
-border:1px solid transparent;
+border:1px solid #1e4147;
 color:#FFF;
 display:inline-block;
 font-size:14px;
@@ -341,10 +341,6 @@ margin:0 auto;
 position:fixed;
 top:50%;
 width:100%;
-}
-
-.display-none {
-display:none;
 }
 
 #inviteCount {
@@ -414,7 +410,6 @@ z-index:0;
 }
 
 .top_visual .obj {
-background:no-repeat center top;
 height:600px;
 margin:0 auto;
 position:relative;
@@ -528,7 +523,7 @@ color:#6E6E6E;
 }
 
 .btn-default:focus,.btn-default:hover {
-background:#ff545c 0 -15px;
+background:#ff545c;
 border:1px solid #ff545c;
 color:#FFF;
 }
@@ -554,7 +549,7 @@ background:#FFF;
 color:#000;
 margin:0 auto;
 text-align:center;
-width:50%;
+width:700px;
 }
 
 #question {
@@ -567,8 +562,9 @@ position:relative;
 }
 
 #checkImg {
-height:45px;
-width:45px;
+height:25px;
+margin-right:5px;
+width:25px;
 }
 
 h2,h3,h4,h5,h6 {
@@ -576,8 +572,9 @@ font-weight:700;
 }
 
 #map {
-height:250px;
-width:92%;
+height:400px;
+margin:0 auto;
+width:60%;
 }
 
 .registFormDetail {
@@ -648,13 +645,13 @@ width:1920px;
 #sch_cirNum {
 color:#FFF;
 float:left;
-font-size:18px;
+font-size:15px;
 font-weight:700;
-height:30px;
+height:27px;
 line-height:32px;
 margin:0 10px;
 text-align:center;
-width:30px;
+width:27px;
 }
 
 .hrs {
@@ -685,14 +682,6 @@ text-align:center;
 width:500px;
 }
 
-</style>
-<style>
-#footer {
-font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
-font-size:12px;
-line-height:1;
-}
-
 #firstcolum,#bbb {
 display:none;
 height:0;
@@ -714,21 +703,58 @@ border:1px solid rgba(0,0,0,.2);
 position:relative;
 }
 
-#title_txt>a,#title_txt > a {
-color:#FFF;
-}
-
-#title_txt>a:hover,#title_txt > a:hover {
-color:#ff545c;
-text-decoration:none;
-}
-
 .regFormAtags,.regFormAtags:hover {
 color:#FF7C4E;
 }
 
 #header.open .header_wrap,#header.fix .header_wrap {
 background:rgba(26,21,21,0.95);
+}
+
+#bar {
+margin:0 auto;
+padding-bottom:80px;
+width:60%;
+}
+
+.fc-toolbar .fc-left h2 {
+color:#13919A;
+font-size:21px;
+}
+
+.checkbox-inline {
+font-size:11px;
+margin-bottom:5px;
+margin-left:10px;
+}
+
+.zeta-menu > a {
+color:#000;
+text-decoration:none;
+}
+
+.zeta-menu > a:hover {
+color:green;
+font-weight:700;
+text-decoration:none;
+}
+
+#title_txt > a:hover {
+color:#ff545c;
+text-decoration:none;
+}
+
+#title_txt>a:hover,#title_txt > a:hover,#title_txt>a:hover {
+color:#ff545c;
+text-decoration:none;
+}
+
+.display-none,.fc-time,.fc-time {
+display:none;
+}
+
+#title_txt>a,#title_txt > a,#title_txt>a,#title_txt > a,#title_txt > a {
+color:#FFF;
 }
 
 @media only screen and min-width 499px and max-width 1212px{
