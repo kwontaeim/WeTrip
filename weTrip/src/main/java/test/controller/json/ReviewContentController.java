@@ -107,15 +107,7 @@ public class ReviewContentController {
 
 			}
 			System.out.println((Integer) session.getAttribute("SchNo"));
-			// HashMap<String, Object> map = new HashMap<>();
-
-			// TravelMain travelMain = new TravelMain();
-			// map.put("reviewBoardNo", value);//reviewBoardNo
 			session.getAttribute("schNo");
-			// map.put("scheduleNo",
-			// (TravelMain)session.getAttribute("SchNo"));//scheduleNo
-			// reviewContentDao.insert(map);
-
 			result.put("state", "success");
 		} catch (Exception e) {
 			e.printStackTrace();

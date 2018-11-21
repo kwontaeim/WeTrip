@@ -5,8 +5,6 @@ function ajaxCommentCount(){
 			alert("변경실패입니다.")
 			return;
 		}
-		//console.log(review)
-		
 	},"json")
 	
 }
@@ -156,8 +154,6 @@ function reviewThumbPhoto(no,i){
 		contents=""
 				contents+=
 				'<img src="../upload/' +arr[0].reviewBoardContentPhotoName+'" id="reviewThumbImg" style="width:100px; height: 100px; border-radius: 5px 5px 5px 5px;">';
-//		console.log($("#reviewPhoto:eq("+i+")"))
-		//$("#reviewPhoto"+i+"").html(contents);
 		$("#reviewPhoto"+i+"").attr("src","../upload/" +arr[0].reviewBoardContentPhotoName);
 		
 		
@@ -176,16 +172,3 @@ function ajaxUpdateViewCount(no){
 	},"json")
 	
 }
-
-/*
-
-  			contents += "<tr>"+
-				"<td>"+arr[i].reviewboardno+"</td>"+
-				"<td>"+arr[i].travelno+"</td>"+
-				"<td><a class='titleLink2' href='#' data-no2='"+arr[i].memberno+"'>"+arr[i].membername+"</a></td>"+
-				"<td><a class='titleLink' href='#' data-no='"+arr[i].reviewboardno+"'>"+arr[i].title +" "+(arr[i].commentCount==0?"":"("+arr[i].commentCount+")")+"</a></td>"+
-				"<td>"+arr[i].content+"</td>"+
-				"<td>"+arr[i].createdDate+"</td>"+
-				"<td>"+arr[i].viewcount+"</td>"+
-			"</tr>";
-*/
