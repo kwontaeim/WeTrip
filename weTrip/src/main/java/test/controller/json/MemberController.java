@@ -107,11 +107,11 @@ public class MemberController {
 					member.setMemberPhoto(newFilename);
 					System.out.println(member);
 				}
-				session.setAttribute("member", member);
-				memberDao.update(member);
 			} else {
 				System.out.println("수정할 파일이 없습니다.");
 			}
+			session.setAttribute("member", member);
+			memberDao.update(member);
 			return JsonResult.success();
 
 		} catch (Exception e) {

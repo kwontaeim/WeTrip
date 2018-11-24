@@ -103,6 +103,8 @@
 		<table id="selectTable">
 		<tr>
 			<td style="width: 100px; color: green; font-weight: bold; padding-bottom: 0; font-size: large;">
+				<div id="detailBar">
+				</div>
 				<div>
 					Subject
 				</div>
@@ -113,6 +115,8 @@
 		</tr>
 		<tr>
 			<td style="color: green; font-weight: bold; font-size: large;">
+				<div id="detailBar">
+				</div>
 				<div>
 					My Trip
 				</div>
@@ -127,6 +131,8 @@
 		<!-- 이거 맵 !!!!!!!!!!!-->
 		<tr>
 			<td style="color: green; font-weight: bold; font-size: large;" rowspan="2">
+				<div id="detailBar">
+				</div>
 				<div>
 					Trip Plan
 				</div>
@@ -134,7 +140,7 @@
 			<td class="root-addSelect" style="border: 0;">
 				<!-- 						<div id="map"></div> <br /> -->
 				<div class="cb-module-header">
-					<h2 class="cb-module-title">schedule lists</h2>
+					<h2 class="cb-module-title">Schedule lists</h2>
 				</div>
 			</td>
 		</tr>
@@ -179,7 +185,7 @@
 				<input type="button" class="btn btn-default reviewBtn" style="float: right;" value="SUBMIT">
 				<button id="updateTMBtn" type="button" class="btn btn-default my-view">MODIFY</button>
 				<button id="deleteTMBtn" type="button" class="btn btn-default my-view">DELETE</button>
-				<button id="cancelBtn" type="button" class="btn btn-default" onclick="location.href='n_mainTest.html'">CANCEL</button>
+				<button id="cancelBtn" type="button" class="btn btn-default" onclick="location.href='index.html'">CANCEL</button>
 			</div>
 		</div>
 	</div>
@@ -214,7 +220,7 @@
 		 +
 		<div class="modal-content" style="width: 630px; ">
 			<div class="modal-body">
-				<h4 class="modal-title" id="myModalLabel" style="font-weight: bold;">* 여행일정 수정</h4>
+				<h4 class="modal-title" id="myModalLabel" style="font-weight: bold;">* Update trip plan</h4>
 				<br>
 				<div class="wrapper">
 					<input id="pac-input" type="text" class="controls form-control" placeholder="변경할 국가/도시를 검색하세요." style="width: 250px; z-index: 6000000;">
@@ -333,7 +339,7 @@
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9rJJvRvlZyTEKc7NX5j1IZJHgfEJRwIg&signed_in=true&libraries=places&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9rJJvRvlZyTEKc7NX5j1IZJHgfEJRwIg&libraries=places&callback=initMap" async defer></script>
 <script src="js/menu.js"></script>
 <script src="js/classie.js"></script>
 <script src="js/cbpAnimatedHeader.min.js"></script>

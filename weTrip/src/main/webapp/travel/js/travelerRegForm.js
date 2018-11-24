@@ -141,7 +141,7 @@ function ajaxAddTravelMain(formData) {
 						'add in success!',
 						'success'
 				)
-				window.location.href = "n_mainTest.html";
+				window.location.href = "index.html";
 			}
 		},
 

@@ -10,8 +10,8 @@
 <link rel="stylesheet" type="text/css" href="css/default.css"/>
 <link rel="stylesheet" type="text/css" href="css/component.css"/>
 <link rel="stylesheet" type="text/css" href="css/main_index.css"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="https://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.min.js"></script>
 <!-- 웹폰트 코드 -->
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Titillium+Web'>
 <link rel='stylesheet' href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css'>
@@ -85,7 +85,7 @@
 <div class="registbackground animsition" data-animsition-in-class="fade-in-up-lg" data-animsition-in-duration="1000" data-animsition-out-class="fade-out-up-lg" data-animsition-out-duration="800">
 	<div class="registFormDetail">
 		<div class="form-group" style="display: none;">
-			<label for="no" class="col-sm-2 control-label">회원번호</label>
+			<label for="no" class="col-sm-2 control-label">User No.</label>
 			<div class="col-sm-10">
 				<input type="text" class="form-control" id="userNo" style="width: 50px; background-color: white;">
 			</div>
@@ -113,29 +113,29 @@
 			<td style="width: 100px; color: green; font-weight: bold; font-size: large;">
 				<div id="detailBar">
 				</div>
-				<div>제목</div>
+				<div>Subject</div>
 			</td>
 			<td>
-				<input type="text" class="form-control input-lg" id="title" style="width: 500px;" placeholder="제목을 입력하세요">
+				<input type="text" class="form-control input-lg" id="title" style="width: 500px;" placeholder="Enter the subject">
 			</td>
 		</tr>
 		<tr>
 			<td style="color: green; font-weight: bold; font-size: large;">
 				<div id="detailBar">
 				</div>
-				<div>나의여행</div>
-				<div>스타일</div>
+				<div>My Trip</div>
+				<div>Style</div>
 			</td>
 			<td style="font-weight: bold; padding-left: 30px;">
 				<label class="checkbox-inline">
 				<img src='img/restaurant.png' id="checkImg">
-				<input type="checkbox" name="chk_info" value="1" style="margin-left: 5px; margin-top: 15px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;식도락 </label>
+				<input type="checkbox" name="chk_info" value="1" style="margin-left: 5px; margin-top: 10px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Food </label>
 				<label class="checkbox-inline">
 				<img src='img/painting.png' id="checkImg">
-				<input type="checkbox" name="chk_info" value="2" style="margin-left: 5px; margin-top: 15px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;전시/공연 </label>
+				<input type="checkbox" name="chk_info" value="2" style="margin-left: 5px; margin-top: 10px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Culture </label>
 				<label class="checkbox-inline">
 				<img src='img/rowing.png' id="checkImg">
-				<input type="checkbox" name="chk_info" value="3" style="margin-left: 5px; margin-top: 15px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;액티비티/레포츠 </label>
+				<input type="checkbox" name="chk_info" value="3" style="margin-left: 5px; margin-top: 10px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Activity </label>
 			</td>
 		</tr>
 		<!-- google Map API-->
@@ -143,16 +143,16 @@
 			<td style="color: green; font-weight: bold; font-size: large;" rowspan="2">
 				<div id="detailBar">
 				</div>
-				<div>가고싶은</div>
-				<div>여행지</div>
+				<div>Visiting</div>
+				<div>Cities</div>
 			</td>
 			<td class="root-addSelect" style="border: 0;">
 				<div id="map">
 				</div>
-				<input id="pac-input" type="text" class="controls form-control" placeholder="국가/도시를 검색하세요." style="width: 250px;"><br/>
+				<input id="pac-input" type="text" class="controls form-control" placeholder="Search the nation/city name." style="width: 250px;"><br/>
 				<form class="form-inline" onsubmit="return false">
-					<input type="text" placeholder="대륙" value="대륙" style="width: 100px; display: none;" class="form-control bit-continent"><input type="text" placeholder="국가명" style="width: 100px;" class="form-control bit-nation1"><input type="text" placeholder="도시명" style="width: 100px;" class="form-control bit-city1"><input type="text" class="form-control bit-startDate1" placeholder="시작일" style="width: 150px;"><input type="text" class="form-control bit-endDate1" placeholder="종료일" style="width: 150px;"><input type="text" placeholder="위도" style="width: 100px; display: none;" class="form-control bit-latitude1"><input type="text" placeholder="경도" style="width: 100px; display: none;" class="form-control bit-longitude1">
-					<button class="btn btn-default selectAddBtn">추가</button>
+					<input type="text" placeholder="Continent" value="대륙" style="width: 100px; display: none;" class="form-control bit-continent"><input type="text" placeholder="Nation" style="width: 100px;" class="form-control bit-nation1"><input type="text" placeholder="City" style="width: 100px;" class="form-control bit-city1"><input type="text" class="form-control bit-startDate1" placeholder="Start Date" style="width: 150px;"><input type="text" class="form-control bit-endDate1" placeholder="End date" style="width: 150px;"><input type="text" placeholder="위도" style="width: 100px; display: none;" class="form-control bit-latitude1"><input type="text" placeholder="경도" style="width: 100px; display: none;" class="form-control bit-longitude1">
+					<button class="btn btn-default selectAddBtn">Add</button>
 				</form>
 				<div id="type-selector" class="controls" style="display: none;">
 					<input type="radio" name="type" id="changetype-all" checked="checked"><label for="changetype-all">All</label>
@@ -163,11 +163,11 @@
 		</tr>
 		<!-- 여기까지맵임 -->
 		<tr>
-			<td class="root-select" style="padding-top: 0px;">
+			<td class="root-select">
 				<div class="cb-module-header">
-					<h2 class="cb-module-title">schedule lists</h2>
+					<h2 class="cb-module-title">Schedule lists</h2>
 				</div>
-				 &nbsp;&nbsp;&nbsp;여행일정을 추가하세요!<br/>
+				 &nbsp;&nbsp;&nbsp;Add your visiting city!<br/>
 				<!-- 핸들바스 적용되는 곳 -->
 			</td>
 		</tr>
@@ -176,11 +176,11 @@
 				<div id="detailBar">
 				</div>
 				<div>
-					자기소개
+					Introuduce
 				</div>
 			</td>
 			<td>
-				<textarea id="selfIntroduce" class="form-control" cols="50" rows="10" style="width: 500px;" placeholder="내용을 입력하세요"></textarea>
+				<textarea id="selfIntroduce" class="form-control" cols="50" rows="10" style="width: 500px;" placeholder="Enter the content"></textarea>
 			</td>
 		</tr>
 		<tr>
@@ -188,12 +188,12 @@
 				<div id="detailBar">
 				</div>
 				<div>
-					사진
+					Picture
 				</div>
 			</td>
 			<td style="font-size: small; font-weight: bold; padding-left: 20px;">
 				<div>
-					자신을 표현할 프로필 및 여행사진을 업로드 하세요!
+					Please upload your profile or trip pictures!
 				</div>
 				<br/><input name="file" id="travelFile" type="file">
 			</td>
@@ -201,8 +201,8 @@
 		</table>
 		<div class="form-group" style="width: 740px; margin: 0 auto; border: 0px solid black; padding-top: 20px; padding-bottom: 20px;">
 			<div class="col-sm-offset-2 col-sm-10" style="padding-left: 400px;">
-				<button id="addTMBtn" type="button" class="btn btn-default my-new">등록</button>
-				<button id="cancelBtn" type="button" class="btn btn-default" onclick="location.href='n_mainTest.html'">취소</button>
+				<button id="addTMBtn" type="button" class="btn btn-default my-new">Submit</button>
+				<button id="cancelBtn" type="button" class="btn btn-default" onclick="location.href='index.html'">Cancel</button>
 			</div>
 		</div>
 	</div>
@@ -229,7 +229,7 @@
 		<span>COPYRIGHT© 2016 GD2723. ALL RIGHTS RESERVED.</span>
 		</address>
 		<div class="btn_sns">
-			<a href="https://www.instagram.com/travel_bit/" title="인스타그램 바로가기" target="_blank"><img src="sns_icon01.png" alt="인스타그램 바로가기" width="36"/></a>
+			<a href="https://www.instagram.com/travel_bit/" title="인스타그램 바로가기" target="_blank"><img src="img/sns_icon01.png" alt="인스타그램 바로가기" width="36"/></a>
 		</div>
 	</div>
 	<br>
@@ -329,7 +329,7 @@
 </div>
 <!-- End of Registration Form-->
 <script src="js/map.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9rJJvRvlZyTEKc7NX5j1IZJHgfEJRwIg&signed_in=true&libraries=places&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9rJJvRvlZyTEKc7NX5j1IZJHgfEJRwIg&libraries=places&callback=initMap" async defer></script>
 <script src="js/menu.js"></script>
 <script src="js/classie.js"></script>
 <script src="js/cbpAnimatedHeader.min.js"></script>

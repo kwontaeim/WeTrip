@@ -189,6 +189,7 @@ z-index:1;
 
 .cbp-af-header nav a {
 margin-right:4%;
+font-family: Trebuchet MS;
 }
 
 #menu_nav>a:hover {
@@ -546,7 +547,7 @@ background:#FFF;
 color:#000;
 margin:0 auto;
 text-align:center;
-width:60%;
+width:90%;
 }
 
 #question {
@@ -571,7 +572,6 @@ font-weight:700;
 #map {
 height:400px;
 margin:0 auto;
-width:60%;
 }
 
 .registFormDetail {
@@ -717,7 +717,7 @@ font-size:21px;
 }
 
 .checkbox-inline {
-font-size:11px;
+font-size:15px;
 margin-bottom:5px;
 }
 
@@ -852,3 +852,16 @@ p.trip_info {
     font-size: 15px;
 }
 
+span.fc-title {
+    color: white;
+}
+
+.inner-inline img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.inner-inline {
+    display: inline-block;
+    vertical-align: middle;
+}

@@ -265,7 +265,7 @@ function ajaxDeleteTravelMain(no) {
 			)
 		}
 
-		location.href = "n_mainTest.html"
+		location.href = "index.html"
 	})
 }
 

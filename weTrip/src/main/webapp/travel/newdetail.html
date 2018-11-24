@@ -37,7 +37,7 @@
 </head>
 <body>
 <div id="divLoading" style="position:absolute; top:35%; left:0; width:100%; text-align:center; margin:0 auto;">
-	<img src="img/loading.gif" alt="잠시만 기다려 주세요. 로딩중입니다."/>
+	<img src="img/loading.gif" alt="Loading"/>
 </div>
 <div id="divBody" style="display:none;">
 	<!-- 상단메뉴시작 -->
@@ -95,7 +95,7 @@
 				<img src="" id="detailUserImage" style="width: 100%;">
 			</div>
 			<h3 style="float: right;">
-			<span id="detailMemberName"></span>님의 여행계획 </h3>
+			<span id="detailMemberName"></span>'s Trip Planning </h3>
 			<br>
 			<br>
 			<hr>
@@ -103,7 +103,7 @@
 		<div class="w3-container w3-card-2 w3-white w3-margin-bottom" style="width: 90%; height: 100%; margin: 0 auto;">
 			<h2 class="w3-text-grey w3-padding-16">
 			<i class="fa fa-certificate fa-fw w3 w3-xxxlarge w3-text-teal"></i>Traveler </h2>
-			<div id="boardImg" style="background-size: cover; width: 100%; height: 450px; margin-bottom: 15px; background-image: url('img/yang/travelphoto3.jpg'); overflow: hidden; background-repeat: no-repeat; background-position: center center;">
+			<div id="boardImg" style="background-size: cover; width: 100%; height: 450px; margin-bottom: 15px; background-image: url('img/yang/travelphoto3.jpg'); overflow: hidden; background-repeat: no-repeat; background-position: center;">
 				<div>
 					<div style="margin: 30px 0 0 40px; color: white;">
 						<span style="font-size: 150px; line-height: 0.6em; opacity: 0.2;">❞</span>
@@ -115,27 +115,27 @@
 				<div class="w3-container info" style="width: 25%; height: 270px; margin: 2% 0 40px 40px; padding: 10px 0 0 10px; border-radius: 2%; background: rgba(255, 255, 255, 0.8); font-size: medium; float: left;">
 					<p class="trip_info">
 						<i class="fa fa-certificate fa-fw w3-xlarge w3-text-teal"></i>
-						<a href="#">Traveler Style</a>
+						<a href="#">Trip Style</a>
 					</p>
 					<div>
-					<label class="trip_style check-food" style="filter: grayscale(100%);"><img src='img/restaurant.png' id="checkImg">식도락 </label>
-					<label class="trip_style check-culture" style="filter: grayscale(100%);"><img src='img/painting.png' id="checkImg">전시/공연 </label>
-					<label class="trip_style check-sports" style="filter: grayscale(100%);"><img src='img/rowing.png' id="checkImg">액티비티/레포츠 </label>
+					<label class="trip_style check-food" style="filter: grayscale(100%);"><img src='img/restaurant.png' id="checkImg">Food</label>
+					<label class="trip_style check-culture" style="filter: grayscale(100%);"><img src='img/painting.png' id="checkImg">Culture</label>
+					<label class="trip_style check-sports" style="filter: grayscale(100%);"><img src='img/rowing.png' id="checkImg">Activity</label>
 					<p class="trip_info">
 						<i class="fa fa-user fa-fw w3-xlarge w3-text-teal"></i>
-						<a href="#">동행자 정보</a>
+						<a href="#">User Info</a>
 					</p>
 					<p class="trip_info">
 						<i class="fa fa-thumbs-o-up fa-fw w3-xlarge w3-text-teal"></i>
-						<a href="#" id="bookmarkSummit">좋아요</a>&nbsp;&nbsp;<span id="bookmarkcount"></span>
+						<a href="#" id="bookmarkSummit">Like</a>&nbsp;&nbsp;<span id="bookmarkcount"></span>
 					</p>
 					<p class="trip_info">
 						<i class="fa fa-envelope fa-fw w3-xlarge w3-text-teal"></i>
-						<a href="#" class="message" data-toggle="modal" data-target="#myMessage">메세지 보내기</a>
+						<a href="#" class="message" data-toggle="modal" data-target="#myMessage">Send Message</a>
 					</p>
 					<p class="trip_info">
 						<i class="fa fa-group fa-fw w3-xlarge w3-text-teal"></i>
-						<a href="#" id="togetherRequest">동행요청하기</a>
+						<a href="#" id="togetherRequest">Accompany Request</a>
 					</p>
 				</div>
 			</div>
@@ -185,7 +185,7 @@
 			<span>COPYRIGHT© 2016 GD2723. ALL RIGHTS RESERVED.</span>
 			</address>
 			<div class="btn_sns">
-				<a href="https://www.instagram.com/travel_bit/" title="인스타그램 바로가기" target="_blank"><img src="sns_icon01.png" alt="인스타그램 바로가기" width="36"/></a>
+				<a href="https://www.instagram.com/travel_bit/" title="인스타그램 바로가기" target="_blank"><img src="img/sns_icon01.png" alt="인스타그램 바로가기" width="36"/></a>
 			</div>
 		</div>
 		<br>
@@ -316,7 +316,7 @@
 		document.getElementById("divLoading").style.display = "none";
 		document.getElementById("divBody").style.display = "";
 	</script>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9rJJvRvlZyTEKc7NX5j1IZJHgfEJRwIg&signed_in=true&libraries=places&callback=initMap" async defer></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9rJJvRvlZyTEKc7NX5j1IZJHgfEJRwIg&libraries=places&callback=initMap" async defer></script>
 	<script type="text/javascript" src="js/menu.js"></script>
 	<script type="text/javascript" src="js/classie.js"></script>
 	<script type="text/javascript" src="js/cbpAnimatedHeader.min.js"></script>
@@ -359,10 +359,10 @@
 	{{#each data}}
 		<div class="root-schedule">
 		<div id="sch_cirNum"></div><h5 class="w3-opacity"><b>{{city}}&nbsp; |&nbsp; {{nation}}</b></h4>
-		<h5 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3"></i>{{startDate}}&nbsp; ~&nbsp; {{endDate}}<!-- <span class="w3-tag w3-teal w3-round">2016-11-26</span> --></h5>
-		<input type="text" id="bit-latitude" placeholder="위도" value="{{lat}}" style="width: 100px; display:none;"
+		<h5 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3"></i>{{startDate}}&nbsp; ~&nbsp; {{endDate}}</h5>
+		<input type="text" id="bit-latitude" placeholder="latitude" value="{{lat}}" style="width: 100px; display:none;"
 		class="form-control bit-latitude"> <input type="text"
-		placeholder="경도" id="bit-longitude" value="{{lng}}" style="width: 100px; display:none;"
+		placeholder="latitude" id="bit-longitude" value="{{lng}}" style="width: 100px; display:none;"
 		class="form-control bit-longitude">
 	<hr>
 	</div>

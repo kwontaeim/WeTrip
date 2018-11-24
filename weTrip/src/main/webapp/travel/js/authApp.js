@@ -172,7 +172,7 @@ function init() {
 
 $(".travelerList").click(function(event) {
 
-	window.location.href = "n_mainTest.html";
+	window.location.href = "index.html";
 });
 
 $("#travelerPage").click(function(event) {
