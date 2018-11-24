@@ -444,17 +444,8 @@ font-weight:400;
 }
 
 html {
-color:#666;
 font-family:Play, 'Nanum Square';
-font-size:14px;
-font-weight:300;
-letter-spacing:normal;
 line-height:1;
-text-align:center;
-}
-
-html,body {
-width:100%;
 }
 
 body {
@@ -568,9 +559,9 @@ position:relative;
 }
 
 #checkImg {
-height:40px;
+height:35px;
+width:35px;
 margin-right:5px;
-width:40px;
 }
 
 h2,h3,h4,h5,h6 {
@@ -616,7 +607,7 @@ margin-right:12px;
 width:10px;
 }
 
-.checkbox-inline,.radio-inline {
+.checkbox-inline, .radio-inline {
 padding-left:10px;
 }
 
@@ -650,6 +641,7 @@ width:1920px;
 
 #sch_cirNum {
 color:#FFF;
+background-color: #13919A;
 float:left;
 font-size:15px;
 font-weight:700;
@@ -727,7 +719,6 @@ font-size:21px;
 .checkbox-inline {
 font-size:11px;
 margin-bottom:5px;
-margin-left:10px;
 }
 
 .zeta-menu > a {
@@ -848,3 +839,16 @@ margin:0;
 padding:0;
 }
 }
+
+label.trip_style {
+position: relative;
+width: 100%;
+font-size:11px;
+margin:0px 0px 5px 20px;
+}
+
+p.trip_info {
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+

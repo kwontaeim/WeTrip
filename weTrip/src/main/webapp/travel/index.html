@@ -213,13 +213,13 @@
 		</video>
 		<div id="bar" class="form-inline" style="border:0px solid black; z-index: 2001;width:100%; position: absolute; top:30%; left:52%; transform:translateX(-52%); text-align: center;">
 			<div id="log-txt">
-				<h2 class="jejugo" style="font-size: 80%;">나의 추억에 동행할 인연을 위한 공간</h2>
+				<h2 class="jejugo" style="font-size: 80%;">Let's go A TRIP with me!</h2>
 				<div class="jejugo" style="font-size: 45%;margin-bottom: 1.5%;">
-					 여행에 동행할 소중한 인연을 시간을 들이지 않고 당신에게 맞춰 드립니다.
+					 Looking for your trip mates with WE TRIP!
 				</div>
 				<div class="my-login jejugo" style="font-size: x-large; color: #FF7C4E; ">
 					<a class="regFormAtags" href="#"><span id="userName" style="font-weight: bold; font-size: 130%;"></span>
-					<span id="travelerRegForm" style="font-size: 120%;">님 동행을 찾아보세요!</span></a><span style="font-size:medium;color:white; margin-left: 2%;">&laquo; 여행 등록 하기!</span>
+					<span id="travelerRegForm" style="font-size: 120%;">, Let's find your trip mates!</span></a><span style="font-size:medium;color:white; margin-left: 2%;">&laquo; show us your trip planing!</span>
 				</div>
 			</div>
 			<br>
@@ -341,7 +341,7 @@
 <script type="text/javascript" src="js/authApp.js"></script>
 <script type="text/javascript" src="js/memberForm.js"></script>
 <script type="text/javascript" src="js/traveler.js"></script>
-<script type="text/javascript" src="js/backgroundmap.js"></script>
+<!-- <script type="text/javascript" src="js/backgroundmap.js"></script> -->
 <script type="text/javascript" src="js/leaflet.js"></script>
 <script type="text/javascript" src="js/stamen.js"></script>
 <script type="text/javascript" src="js/travelerdetail.js"></script>
@@ -380,7 +380,7 @@ $(function() {
        $.post(serverAddr + "/travel/autoComplecation.json", function(obj) {
         var result = obj.jsonResult
         if (result.state != "success") {
-         alert("검색 결과가 없습니다.")
+         alert("there's no result")
          return
         }
        var arr = result.data

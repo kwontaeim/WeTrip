@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html>
 <head>
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -7,7 +7,6 @@
 <title>Let's go together!</title>
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css"/>
 <meta name="description" content="Blueprint: On-Scroll Animated Header"/>
-<meta name="keywords" content="fixed header, animatied header, javascript, wed design, template, on scroll"/>
 <link rel="stylesheet" type="text/css" href="css/default.css"/>
 <link rel="stylesheet" type="text/css" href="css/component.css"/>
 <link rel="stylesheet" type="text/css" href="css/main_index.css"/>
@@ -31,17 +30,17 @@
 	<div class="upper">
 		<div class='zeta-menu-bar my-login'>
 			<ul class="zeta-menu">
-				<li><a href="#2"><img src='img/iconmonstr-user-20-240.png' class="mainImg my-login"></a><a id="requestCountAll"></a>
+				<li><a href="#2"><img src='img/icon-user-20-240.png' class="mainImg my-login"></a><a id="requestCountAll"></a>
 				<ul>
-					<li><a href="#" id="myInfo"><img src='img/iconmonstr-note-19-240.png' id="subImg"><br>
+					<li><a href="#" id="myInfo"><img src='img/icon-note-19-240.png' id="subImg"><br>
 					MY INFO</a>
 					</li>
-					<li><a href="#" id="travelerMessage"><img src='img/iconmonstr-email-2-240.png' id="subImg"><br>
+					<li><a href="#" id="travelerMessage"><img src='img/icon-email-2-240.png' id="subImg"><br>
 					MESSAGE</a>
 					</li>
-					<li><a class=" fadeandscale_open" id="accompany" href="#"><img src='img/iconmonstr-user-21-240.png' id="subImg"><br>
+					<li><a class=" fadeandscale_open" id="accompany" href="#"><img src='img/icon-user-21-240.png' id="subImg"><br>
 					ACCOMPANY</a></li>
-					<li><a id="logoutBtn" href='#'><img src='img/iconmonstr-log-out-9-240.png' id="subImg"><br>
+					<li><a id="logoutBtn" href='#'><img src='img/icon-log-out-9-240.png' id="subImg"><br>
 					LOGOUT</a>
 					</li>
 				</ul>
@@ -49,7 +48,7 @@
 			</ul>
 		</div>
 		<div id="fadeandscale" class="well">
-			<h4>동행요청</h4>
+			<h4>Accompany Request</h4>
 			<h5></h5>
 			<h6></h6>
 			<button style="float: right;" class="fadeandscale_close btn btn-default">Close</button>
@@ -78,25 +77,25 @@
 <div class="registbackground">
 	<div class="registFormDetail">
 		<div class="form-group" style="display: none;">
-			<label for="no" class="col-sm-2 control-label">회원번호</label>
+			<label for="no" class="col-sm-2 control-label">User No.</label>
 			<div class="col-sm-10">
 				<input type="text" class="form-control" id="userNo" style="width: 50px; background-color: white;">
 			</div>
 		</div>
 		<div class="form-group" style="display: none;">
-			<label for="no" class="col-sm-2 control-label">여행번호</label>
+			<label for="no" class="col-sm-2 control-label">Trip No.</label>
 			<div class="col-sm-10">
 				<input type="text" class="form-control" id="travelNo" style="width: 50px; background-color: white;">
 			</div>
 		</div>
 		<div class="form-group" style="display: none;">
-			<label for="no" class="col-sm-2 control-label">지역번호</label>
+			<label for="no" class="col-sm-2 control-label">location No.</label>
 			<div class="col-sm-10">
 				<input type="text" class="form-control" id="locationNo" style="width: 50px; background-color: white;">
 			</div>
 		</div>
 		<div class="form-group" style="display: none;">
-			<label for="no" class="col-sm-2 control-label">스타일번호</label>
+			<label for="no" class="col-sm-2 control-label">Style No.</label>
 			<div class="col-sm-10">
 				<input type="text" class="form-control" id="styleNo" style="width: 50px; background-color: white;">
 			</div>
@@ -104,10 +103,8 @@
 		<table id="selectTable">
 		<tr>
 			<td style="width: 100px; color: green; font-weight: bold; padding-bottom: 0; font-size: large;">
-				<div id="detailBar">
-				</div>
 				<div>
-					제목
+					Subject
 				</div>
 			</td>
 			<td>
@@ -116,29 +113,22 @@
 		</tr>
 		<tr>
 			<td style="color: green; font-weight: bold; font-size: large;">
-				<div id="detailBar">
+				<div>
+					My Trip
 				</div>
 				<div>
-					나의여행
-				</div>
-				<div>
-					스타일
+					Style
 				</div>
 			</td>
-			<td style="font-weight: bold; padding-left: 30px;">
-				<label class="checkbox-inline"><img src='img/restaurant.png' id="checkImg" class="check-food"><input type="checkbox" name="chk_info" id="1" value="1" style="margin-left: 5px; margin-top: 15px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;식도락 </label><label class="checkbox-inline"><img src='img/painting.png' id="checkImg"><input type="checkbox" class="check-culture" name="chk_info" id="2" value="2" style="margin-left: 5px; margin-top: 15px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;전시/공연 </label><label class="checkbox-inline"><img src='img/rowing.png' id="checkImg"><input type="checkbox" name="chk_info" class="check-sports" id="3" value="3" style="margin-left: 5px; margin-top: 15px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;액티비티/레포츠 </label>
+			<td class="style_check" style="font-weight: bold; padding-left: 30px;">
+				<label class="checkbox-inline"><img src='img/restaurant.png' id="checkImg" class="check-food"><input type="checkbox" name="chk_info" id="1" value="1" style="margin-left: 5px; margin-top: 15px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Food </label><label class="checkbox-inline"><img src='img/painting.png' id="checkImg"><input type="checkbox" class="check-culture" name="chk_info" id="2" value="2" style="margin-left: 5px; margin-top: 15px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Culture </label><label class="checkbox-inline"><img src='img/rowing.png' id="checkImg"><input type="checkbox" name="chk_info" class="check-sports" id="3" value="3" style="margin-left: 5px; margin-top: 15px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Activity </label>
 			</td>
 		</tr>
 		<!-- 이거 맵 !!!!!!!!!!!-->
 		<tr>
 			<td style="color: green; font-weight: bold; font-size: large;" rowspan="2">
-				<div id="detailBar">
-				</div>
 				<div>
-					가고싶은
-				</div>
-				<div>
-					여행지
+					Trip Plan
 				</div>
 			</td>
 			<td class="root-addSelect" style="border: 0;">
@@ -156,10 +146,8 @@
 		</tr>
 		<tr>
 			<td style="padding-top: 20px; padding-bottom: 20px; color: green; font-weight: bold; font-size: large;">
-				<div id="detailBar">
-				</div>
 				<div>
-					자기소개
+					Introduce
 				</div>
 			</td>
 			<td>
@@ -168,18 +156,16 @@
 		</tr>
 		<tr>
 			<td style="width: 140px; color: green; font-weight: bold; font-size: large;">
-				<div id="detailBar">
-				</div>
 				<div>
-					사진
+					Picture
 				</div>
 			</td>
 			<td class="fileList" style="font-size: small; font-weight: bold; padding-left: 20px;">
 				<div>
-					자신을 표현할 프로필 및 여행사진을 업로드 하세요!
+					Please upload your profile or trip pictures!
 				</div>
 				<div>
-					(파일 여러개 선택 가능)
+					(you can upload multiple pictures)
 				</div>
 				<br/>
 				<div class="innerFileList">
@@ -189,11 +175,11 @@
 		</tr>
 		</table>
 		<div class="form-group" style="margin: 0 auto; border: 0px solid black; padding-top: 20px; padding-bottom: 20px;">
-			<div class="col-sm-offset-2 col-sm-10" style="padding-left: 300px;">
-				<input type="button" class="btn btn-default reviewBtn" style="float: right;" value="리뷰등록">
-				<button id="updateTMBtn" type="button" class="btn btn-default my-view">변경</button>
-				<button id="deleteTMBtn" type="button" class="btn btn-default my-view">삭제</button>
-				<button id="cancelBtn" type="button" class="btn btn-default" onclick="location.href='n_mainTest.html'">취소</button>
+			<div class="col-sm-offset-2 col-sm-10" style="padding-left: 200px;">
+				<input type="button" class="btn btn-default reviewBtn" style="float: right;" value="SUBMIT">
+				<button id="updateTMBtn" type="button" class="btn btn-default my-view">MODIFY</button>
+				<button id="deleteTMBtn" type="button" class="btn btn-default my-view">DELETE</button>
+				<button id="cancelBtn" type="button" class="btn btn-default" onclick="location.href='n_mainTest.html'">CANCEL</button>
 			</div>
 		</div>
 	</div>
@@ -269,8 +255,8 @@
 				<div class="wrapper">
 					<form class="form-signin">
 						<input type="text" class="form-control yang" id="email" placeholder="이메일" required="" autofocus=""/></br><input type="password" id="password" class="form-control yang" placeholder="비밀번호" required=""/><label class="checkbox">
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="saveEmail"> 이메일저장 </label>
-						<button id="loginBtn" class=" btn btn-lg btn-primary btn-block " type="button">로그인</button>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="saveEmail">Save Email</label>
+						<button id="loginBtn" class=" btn btn-lg btn-primary btn-block" type="button">Login</button>
 					</form>
 					<br>
 					<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
@@ -376,7 +362,7 @@
 			ajaxLoadTravelMain(no)
 			$(".my-new").css("display", "none")
 		} else {
-			// 클래스에 .my-view가 붙으면 새글 들어갔을때 안보이게함
+			// 클래스에 .my-view가 붙으면 새 글 들어갔을때 안보이게함
 			$(".my-view").css("display", "none")
 		}
 	    ajaxInviteList()
@@ -397,16 +383,16 @@
 <div class="form-inline root-schedule">
 <div id="sch_cirNum"></div>
 <input type="text" class="form-control bit-locationNo" style="width: 50px; display:none;"value="{{locationNo}}" readonly>
-<input type="text" placeholder="대륙" value="대륙" class="form-control bit-continent" style="width: 100px; display:none;" readOnly = true> 
-<input type="text" placeholder="국가" value="{{nation}}" style="width: 100px;"
+<input type="text" placeholder="continent" value="continent" class="form-control bit-continent" style="width: 100px; display:none;" readOnly = true> 
+<input type="text" placeholder="nation" value="{{nation}}" style="width: 100px;"
 class="form-control bit-nation" readOnly = true>
-<input type="text" placeholder="도시명" value="{{city}}"style="width: 130px;"
+<input type="text" placeholder="city" value="{{city}}"style="width: 130px;"
 class="form-control bit-city" readOnly = true>
 <input type="text" class="form-control bit-scheduleNo" style="width: 50px; display:none;" value="{{scheduleNo}}" readOnly = true>
 <input type="text" class="form-control bit-startDate"
-placeholder="시작일" value="{{startDate}}" style="width: 100px;" readOnly = true> <input
+placeholder="StartDate" value="{{startDate}}" style="width: 100px;" readOnly = true> <input
 type="text" class="form-control bit-endDate"
-placeholder="종료일" value="{{endDate}}" style="width: 100px;" readonly> <input
+placeholder="EndDate" value="{{endDate}}" style="width: 100px;" readonly> <input
 type="text" placeholder="위도" value="{{lat}}" style="width: 100px; display:none; "
 class="form-control bit-latitude" readOnly = true> <input type="text"
 placeholder="경도" value="{{lng}}" style="width: 100px;display:none; "

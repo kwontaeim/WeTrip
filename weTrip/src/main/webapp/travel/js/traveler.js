@@ -53,7 +53,7 @@ function ajaxRegistFormList() {
 	    		'<a class="titleLink" href="#" data-memno="' + arr[i].memberNo + '" data-no="' + arr[i].travelMainNo + '">' + arr[i].title + '</a></div>' +
 	    		'<div style="width:50px; height:50px; border-radius: 25px 25px 25px 25px; overflow: hidden;">'
 	    		if (arr[i].myPhoto == null) {
-	    			contents += '<img src="img/iconmonstr-user-20-240.png"></div>'
+	    			contents += '<img src="img/icon-user-20-240.png"></div>'
 	    		} else if (arr[i].myPhoto.substring(0,1) == 'h') {
 	    			contents += '<img src="' + arr[i].myPhoto + '"></div>'
 	    		} else {
@@ -131,7 +131,7 @@ function ajaxSearchList(registForm) {
 	    		'<a class="titleLink" href="#" data-memno="' + arr[i].memberNo + '" data-no="' + arr[i].travelMainNo + '">' + arr[i].title + '</a></div>' +
 	    		'<div style="width:50px; height:50px; border-radius: 25px 25px 25px 25px; overflow: hidden;">'
 	    		if (arr[i].myPhoto == null) {
-	    			contents += '<img src="img/iconmonstr-user-20-240.png"></div>'
+	    			contents += '<img src="img/icon-user-20-240.png"></div>'
 	    		} else if (arr[i].myPhoto.substring(0,1) == 'h') {
 	    			contents += '<img src="' + arr[i].myPhoto + '"></div>'
 	    		} else {
@@ -201,18 +201,8 @@ function ajaxInviteList() {
 	    		"&nbsp&nbsp;"+
 	    		arr[i].inviteName+" 님이 동행요청을 하셨습니다. &nbsp;"+
 	    		'<button type="button" data-no="'+arr[i].inviteBoardNo+'" data-no2="'+arr[i].memberNo2+'"class="btn btn-default btn-sm" id="invitedetail">상세페이지</button>'+
-//	    		'<a  onclick="detailPage("'+arr[i].inviteNo+'")" class="btn btn-default btn-sm fadeandscale_open"  >상세 페이지3</a>'+
 				'<button type="button" data-no="'+arr[i].inviteNo+'" data-no2="'+arr[i].memberNo2+'" data-no3="'+arr[i].memberNo+'" class="btn btn-default btn-sm" id="inviteadd">수락</button><button data-no="'+arr[i].inviteNo+'" class="btn btn-default btn-sm" id="inviterefuse" value="sdfds">거절</button>'
 				+'</pre>'
-	    		
-	    		/*'<ul>' +
-	    		'<li><a class="titleLink" href="#" data-memno="' + arr[i].memberNo + '" data-no="' + arr[i].no + '">' +
-	    		'<img src="' + arr[i].myPhoto + '"></a>' +
-	    		'<div class="cycle-overlay">' +
-	    		arr[i].writer + '<br>' +
-	    		arr[i].continent + ',' + arr[i].nation + ',' + arr[i].city + '<br>' +
-	    		arr[i].startDate + '~' + arr[i].endDate + '</div></li>' +
-	    		'</ul>'*/
 	      }
 	    
 	    $("#fadeandscale>h4").html(contents)

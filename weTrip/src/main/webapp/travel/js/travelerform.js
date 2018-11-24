@@ -306,7 +306,7 @@ function travelMainFilelist() {
 			return
 		}
 
-		var contents = '<a>기존 업로드 파일</a><br/>';
+		var contents = '<a>Existing Uploaded File</a><br/>';
 		var arr = result.data
 		for (var i in arr) {
 			contents +=  '<a>' + arr[i].fileName + "</a><br/>" +
@@ -338,7 +338,7 @@ function favorChecked(result) {
 	});
 
 
-	$('.checkbox-inline').each(function() {
+	$('label.trip_style').each(function() {
 
 		if(result.data.styleNo == "1"){ //값 비교
 			$(".check-food").css("filter", "grayscale(0%)")
