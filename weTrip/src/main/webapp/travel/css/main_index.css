@@ -865,3 +865,12 @@ span.fc-title {
     display: inline-block;
     vertical-align: middle;
 }
+
+input#searchaddBtn {
+    height: 40px;
+    border-radius: 6px;
+}
+
+span#travelerRegForm {
+    color: cadetblue;
+}

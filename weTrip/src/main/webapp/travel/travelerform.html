@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Let's go together!</title>
+<title>WE TRIP</title>
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css"/>
 <meta name="description" content="Blueprint: On-Scroll Animated Header"/>
 <link rel="stylesheet" type="text/css" href="css/default.css"/>
@@ -53,10 +53,10 @@
 			<h6></h6>
 			<button style="float: right;" class="fadeandscale_close btn btn-default">Close</button>
 		</div>
-		<div class="my-login" style="position: absolute; top:5px; right: 130px; color:white;">
-			<span id="userName" style="font-weight: bold; font-size: 18px;"></span>
-			<a href="#" style="color:white;"><span id="travelerRegForm" style="font-size: 13px;">님 동행을 찾아보세요!</span></a>
-		</div>
+		<div class="my-login" style="position: absolute;top:5px;right: 130px;color: palevioletred;">
+			<span id="userName" style="font-weight: bold;font-size: 18px;">Joy</span>
+			<a href="#"><span id="travelerRegForm" style="font-size: 13px;">, Let's find your trip mate!</span></a>
+			</div>
 		<div style='position: absolute; right: 10px; top: 10px; font-size: 15px;'>
 			<a href='#' class="btn btn-default btn-sm my-logout" data-toggle="modal" data-target="#myModal1">LOGIN</a><a href='#' class="btn btn-default btn-sm my-logout" data-toggle="modal" data-target="#myModal">SIGN IN</a>
 		</div>
@@ -68,7 +68,7 @@
 			<img src='img/passport.png' style="float: left; width: 55px; height: 55px;">
 			<h1 id="title_txt"><a href="index.html">WE TRIP</a></h1>
 		</div>
-		<nav>
+		<nav id="menu_nav" style="border:0px solid black; margin-right: 10px;">
 		<a href="#" id="travelerPage">Accompany</a><a href="#" id="reviewPage">Review</a><a href="#" id="qnaPage">Q&A</a>
 		</nav>
 	</div>
@@ -182,7 +182,7 @@
 		</table>
 		<div class="form-group" style="margin: 0 auto; border: 0px solid black; padding-top: 20px; padding-bottom: 20px;">
 			<div class="col-sm-offset-2 col-sm-10" style="padding-left: 200px;">
-				<input type="button" class="btn btn-default reviewBtn" style="float: right;" value="SUBMIT">
+				<input type="button" class="btn btn-default reviewBtn" style="float: right;" value="REVIEW">
 				<button id="updateTMBtn" type="button" class="btn btn-default my-view">MODIFY</button>
 				<button id="deleteTMBtn" type="button" class="btn btn-default my-view">DELETE</button>
 				<button id="cancelBtn" type="button" class="btn btn-default" onclick="location.href='index.html'">CANCEL</button>
