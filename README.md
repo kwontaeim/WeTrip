@@ -5,7 +5,7 @@ Bitcamp(Bootcamp) Team Project, Nov 2016
 The traveling trend is changing packages to single trip. 
 Even though people would like to go travel whenever they want, It’s hard to find an accompany who is suitable each other anytime and anywhere. And there’re not proper platforms to match between single travelers.
 <br><br>
-We trip helps you find an accompanies to make your trip joyful
+**We trip helps you find an accompanies to make your trip joyful!**
 
 
 ## Main Features
