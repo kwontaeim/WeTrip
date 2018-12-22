@@ -1,4 +1,4 @@
-# We Trip
+# We Trip :two_women_holding_hands:
 Bitcamp(Bootcamp) Team Project, Nov 2016
 
 ## Introduction
