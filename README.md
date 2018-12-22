@@ -1,5 +1,5 @@
 # We Trip
-Nov 2016 Bitcamp(Bootcamp) Team Project
+Bitcamp(Bootcamp) Team Project, Nov 2016
 
 ## Introduction
 The traveling trend is changing packages to single trip. 
