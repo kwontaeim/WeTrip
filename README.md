@@ -15,7 +15,7 @@ Even though people would like to go travel whenever they want, It’s hard to fi
 
 
 ## System Architecture
-<img src=https://user-images.githubusercontent.com/21251967/50376553-375e2d00-0606-11e9-8228-6288b93131e6.png width="600px">
+<img src=https://user-images.githubusercontent.com/21251967/50376553-375e2d00-0606-11e9-8228-6288b93131e6.png width="500px">
 
 - AJAX<br>
 Asynchronous JavaScript and XML (AJAX) is the art of exchanging data with a server, and updating parts of a web page without reloading the whole webpage. In other words, AJAX allows web pages to be updated asynchronously by exchanging small amounts of data with the server behind the scenes. If application are not using AJAX, then it will have to reload the webpage on every request user made.<br><br>
