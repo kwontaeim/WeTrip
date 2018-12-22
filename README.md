@@ -17,3 +17,6 @@ Asynchronous JavaScript and XML (AJAX) is the art of exchanging data with a serv
 
 In recent years, essence of XML has been reduced. JSON (JavaScript Object Notation) is often used as an alternative format for data interchange, although other formats such as preformatted HTML or plain text can also be used for data purpose.
 
+## node.js
+We Trip use Node.js for checking duplicate email address.
+Node.js has extraordinary features when it comes to developing real-time applications such as chats and gaming apps. It is also a good fit for the programs that need event-based server, as well as non-blocking driven servers.
