@@ -31,5 +31,5 @@ Node.js has extraordinary features when it comes to developing real-time applica
 
 
 ## Database Modeling
-We Trip used eXERD for modeling Database. <br>
+We Trip used eXERD for modeling Database. <br><br>
 <img src=https://user-images.githubusercontent.com/21251967/50378827-195af180-0633-11e9-994b-29d801c4f794.png width="500px">
