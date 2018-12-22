@@ -6,3 +6,4 @@ The traveling trend is changing packages to single trip.
 Even though people would like to go travel whenever they want, It’s hard to find an accompany who is suitable each other anytime and anywhere. And there’re not proper platforms to match between single travelers.
 
 # Main Features
+![picture1](https://user-images.githubusercontent.com/21251967/50376057-61602100-05ff-11e9-8f5f-347f76aa0ed4.png)
