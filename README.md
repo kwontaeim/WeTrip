@@ -15,7 +15,6 @@ Even though people would like to go travel whenever they want, It’s hard to fi
 ![framework](https://user-images.githubusercontent.com/21251967/50376516-70e26880-0605-11e9-8cfc-ccf122687264.png)
 - Spring Framework<br>
 Asynchronous JavaScript and XML (AJAX) is the art of exchanging data with a server, and updating parts of a web page – without reloading the whole webpage. In other words, AJAX allows web pages to be updated asynchronously by exchanging small amounts of data with the server behind the scenes. If application are not using AJAX, then it will have to reload the webpage on every request user made.
-
 In recent years, essence of XML has been reduced. JSON (JavaScript Object Notation) is often used as an alternative format for data interchange, although other formats such as preformatted HTML or plain text can also be used for data purpose.
 
 - node.js<br>
