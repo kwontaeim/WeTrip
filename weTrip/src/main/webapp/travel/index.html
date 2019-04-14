@@ -8,7 +8,7 @@
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css"/>
 <link rel="stylesheet" type="text/css" href="css/component.css"/>
-<<link rel="stylesheet" type="text/css" href="css/main_index.css"/>
+<link rel="stylesheet" type="text/css" href="css/main_index.css"/>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 <!-- 합쳐지고 최소화된 최신 CSS -->
@@ -86,12 +86,12 @@
 				</li>
 			</ul>
 		</div>
-<!-- 		<div id="fadeandscale" class="well">
+		<div id="fadeandscale" class="well">
 			<h4>동행요청</h4>
 			<h5></h5>
 			<h6></h6>
-			<button style="float: right;" class="fadeandscale_close btn btn-default">Close</button>
-		</div> -->
+			<button style="float: right;" class="fadeandscale_ btn btn-default">Close</button>
+		</div>
 		<div id="logForm" style='position: absolute; right: 10px; top: 10px; font-size: 15px;'>
 			<a href='#' class="btn btn-default btn-sm my-logout" data-toggle="modal" data-target="#myModal1">LOGIN</a><a href='#' class="btn btn-default btn-sm my-logout" data-toggle="modal" data-target="#myModal">SIGN IN</a>
 		</div>
@@ -155,14 +155,14 @@
 			<div class="modal-body">
 				<div class="wrapper">
 					<form class="form-signin">
-						<input type="text" class="form-control yang" id="email" placeholder="이메일" required="" autofocus=""/></br><input type="password" id="password" class="form-control yang" placeholder="비밀번호" required=""/><label class="checkbox">
+						<input type="text" class="form-control yang" id="email" placeholder="Email" required="" autofocus=""/><br><input type="password" id="password" class="form-control yang" placeholder="Password" required=""/><label class="checkbox">
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="saveEmail"> Email Saved </label>
 						<button id="loginBtn" class=" btn btn-lg btn-primary btn-block " type="button">LOGIN</button>
 					</form>
 					<br>
 					<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 					</fb:login-button>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					<div id="status">
 					</div>
 				</div>
@@ -267,7 +267,7 @@
 <!-- Main -->
 <div id="main" style="margin-top:8%;" class="animsition" data-animsition-in-class="fade-in-up-lg" data-animsition-in-duration="1000" data-animsition-out-class="fade-out-up-lg" data-animsition-out-duration="800">
 	<div class="inner">
-		<section class="tiles" style=" margin-top: 0px;margin: 0 auto;padding-left: 1.5%;padding-top: 3%;;background-color: #f0f0f0;padding-bottom: 0.9%;">
+		<section class="tiles" style=" margin-top: 0px;margin: 0 auto;padding-left: 1.5%;padding-top: 3%;background-color: #f0f0f0;padding-bottom: 0.9%;">
 		<article class="style1" style="height:23%; width:23%;margin: 13px;">
 		<span class="image" style="width:100%;margin:0; padding:0;">
 		<img src="img/mini_main17.jpg" alt=""/>
@@ -307,7 +307,7 @@
 		</div>
 		</a>
 		</article>
-		<article class="style4" style="height:23%; width:23%;margin: 13px;">
+		<article class="style4" style="height:23%; width:23%; margin: 13px;">
 		<span class="image">
 		<img src="img/mini_main15.jpg" alt=""/>
 		</span>
@@ -324,7 +324,6 @@
 	</section>
 </div>
 <div id="content" style="background-color: #F0F0F0;" class="animsition" data-animsition-in-class="fade-in-up-lg" data-animsition-in-duration="1000" data-animsition-out-class="fade-out-up-lg" data-animsition-out-duration="800">
-	</br></br></br></br>
 	<table class="changallery" style="margin: 0 auto;">
 	</table>
 	<br>
@@ -348,6 +347,14 @@
 </div>
 <!-- footer 끝 div -->
 <!-- 페이스북 -->
+   <script>
+   $(document).ready(function() {
+    $('#fadeandscale').popup({
+      pagecontainer : '.zeta-menu',
+      transition : 'all 0.5s'
+    });
+  }); 
+  </script>s
 <script>
   window.fbAsyncInit = function() {
   FB.init({
@@ -383,14 +390,6 @@
 <script type="text/javascript" src="js/message.js"></script>
 <script type="text/javascript" src="js/jquery.popupoverlay.js"></script>
 <script type="text/javascript" src="../node_modules/es6-promise/dist/es6-promise.auto.min.js"></script>
-<script>
-  $(document).ready(function() {
-    $('#fadeandscale').popup({
-      pagecontainer : '.container',
-      transition : 'all 0.3s'
-    });
-  });
-  </script>
 <script type="text/javascript">
 $(function() {
     $(".bit-startDate, .bit-endDate").datepicker({
@@ -402,9 +401,9 @@ $(function() {
     init() // 화면을 준비시킨다
     ajaxLoginUser() // 로그인 유저 정보 가져오기
     ajaxRegistFormList()
-    ajaxInviteList()
-    ajaxAgreeInviteList()
-    ajaxBookmarkList() 
+    //ajaxInviteList()
+    //ajaxAgreeInviteList()
+    //ajaxBookmarkList() 
 </script>
 <script type='text/javascript'>
   var city = [];

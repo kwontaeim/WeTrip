@@ -162,7 +162,7 @@ padding:10px 30px 10px 10px;
 
 .zeta-menu .mainImg {
 border:3px solid #ff545c;
-margin-top:20px;
+margin-top: 10%;
 }
 
 .cbp-af-inner>div>img {
@@ -873,4 +873,12 @@ input#searchaddBtn {
 
 span#travelerRegForm {
     color: cadetblue;
+}
+
+.my-login, .my-logout {
+	visibility: hidden;
+}
+
+#fadeandscale {
+	visibility: hidden;
 }

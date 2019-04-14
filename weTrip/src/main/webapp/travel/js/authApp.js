@@ -67,6 +67,8 @@ function ajaxLogin(user) {
 						)
 				return;
 			} 
+			console.log(result.data.name);
+			sessionStorage.setItem("loginUserName",result.data.name);
 			window.location.reload(true) /*href = "travel.html"*/
 		},
 		error: function(msg) {
@@ -84,6 +86,7 @@ function ajaxLogout() {
 			console.log("로그아웃 실패입니다.")
 			return;
 	})
+	sessionStorage.removeItem('loginUserName');
 	FB.logout();
 }
 
@@ -108,13 +111,7 @@ var checktheNo;
 function ajaxLoginUser() {
 	$.getJSON("loginUser.json", function(obj) {
 		var result = obj.jsonResult
-		if (result.state != "success") {
-			$('.my-login').css("display", "none")
-			console.log(result.data)
-			return
-		} else {
-			$('.my-logout').css("display", "none")
-		}
+
 		checktheNo=result.data.no
 		$("#userName5").text(result.data.name)
 		$('.aaa').css("display", "none")
@@ -137,7 +134,6 @@ function ajaxLoginUser() {
 		}
 		$("#myInfo").click(function(event) {
 			ajaxLoginUser()
-
 			window.location.href = "memb_regForm.html?no=" + result.data.no;
 		});
 
@@ -153,6 +149,13 @@ function ajaxLoginUser() {
 
 
 function init() {
+	
+	if (sessionStorage.getItem("loginUserName") != null) {
+		$('.my-login').css("visibility", "visible")
+		return
+	} else {
+		$('.my-logout').css("visibility", "visible")
+	}
 
 	if (document.cookie != "") { 
 		var cookieMap = bit.cookieToObject()
@@ -219,3 +222,4 @@ $(".qnaPage").click(function(event) {
 
 	window.location.href = "qnaApp.html";
 });
+

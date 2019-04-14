@@ -60,10 +60,9 @@ public class AuthController {
       if (member == null) {
         sessionStatus.setComplete(); // 스프링이 관리하는 세션 값을 무효화시킨다.
         return JsonResult.fail();
-
       } else {
         model.addAttribute("member", member); // Model 객체에 로그인 회원 정보를 담는다.
-        return JsonResult.success();
+        return JsonResult.success(member);
       }
 
     } catch (Exception e) {
