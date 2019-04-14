@@ -1,5 +1,23 @@
 @import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
 
+html {
+font-family:Play, 'Nanum Square';
+line-height:1;
+}
+
+body {
+background:#F0F0F0;
+position:relative;
+}
+
+h1,h2,h3,h4,h5,h6,th {
+font-weight:400;
+}
+
+html,body,h1,h2,h3,h4,h5,h6 {
+font-family:'Titillium Web', 'Nanum Gothic', sans-serif;
+}
+
 .jejugo {
 font-family:'Jeju Gothic', serif;
 }
@@ -10,10 +28,6 @@ z-index:50000!important;
 
 .swal2-modal {
 z-index:50001!important;
-}
-
-html,body,h1,h2,h3,h4,h5,h6 {
-font-family:'Titillium Web', 'Nanum Gothic', sans-serif;
 }
 
 .thumbnail-wrappper {
@@ -444,19 +458,6 @@ font-size:18px;
 font-weight:400;
 }
 
-html {
-font-family:Play, 'Nanum Square';
-line-height:1;
-}
-
-body {
-background:#F0F0F0;
-position:relative;
-}
-
-h1,h2,h3,h4,h5,h6,th {
-font-weight:400;
-}
 
 i,em,address {
 font-style:normal;
