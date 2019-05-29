@@ -1,0 +1,19 @@
+{
+  "name": "wetrip",
+  "version": "1.0.0",
+  "description": "Bitcamp(Bootcamp) Team Project, Nov 2016",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwontaeim/weTrip.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kwontaeim/weTrip/issues"
+  },
+  "homepage": "https://github.com/kwontaeim/weTrip#readme"
+}
