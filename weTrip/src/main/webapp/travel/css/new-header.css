@@ -6,35 +6,27 @@
 .animation-header {
 	position: fixed;
 	width: 100%;
-  background: #1e4147;
-	z-index: 10000;
-	overflow: hidden;
-}
-
-.animation-header .animation-header-menu {
-	max-width: 1200px;
-	text-align: center;
-	float: left;
+	z-index: 1;
+	background: #1e4147;
 }
 
 .animation-header-menu {
-		
-	  width: 90%;
-    max-width: 85em;
-    margin-top: 10px;
-    padding: 0 1.875em;
-	
+	text-align: center;
+	float: left;
+	width: 80%;
+	margin-left: 5%;
 }
 
-.animation-header-menu > div > img {
-    width: 55px;
-    height: 55px;
-    float: left; 
+.animation-header-menu>div>img {
+	width: 55px;
+	height: 55px;
+	float: left;
 }
 
 .main-title {
 	height: 50%;
 	vertical-align: middle;
+	float:left;
 }
 
 .main-title img, .main-title h1 {
@@ -63,7 +55,6 @@
 .animation-header nav {
 	float: right;
 	border: 0px solid black;
-	margin-right: 10px;
 }
 
 .animation-header nav a {
@@ -72,7 +63,6 @@
 	font-weight: 700;
 	font-size: 19px;
 	margin-right: 10px;
-	
 }
 
 /* animation shrink Transitions and class for reduced height */
@@ -82,8 +72,10 @@
 	transition: all 0.2s;
 }
 
-.animation-header.animation-header-shrink h1, .animation-header.animation-header-shrink nav a {
-/* 	line-height: 100px; */
+.animation-header.animation-header-shrink h1, .animation-header.animation-header-shrink nav a
+	{
+	/* 	line-height: 100px; */
+	
 }
 
 .animation-header.animation-header-shrink h1 {
@@ -91,36 +83,110 @@
 }
 
 @media screen and (max-width: 600px) {
-		.animation-header h1 {
+	.animation-header h1 {
 		font-size: 24px;
 	}
-	
-	.animation-header-menu > div > img {
-    width: 35px;
-    height: 35px;
-    float: left;
+	.animation-header-menu>div>img {
+		width: 35px;
+		height: 35px;
+		float: left;
 	}
-	
+
 	.main-title, .menu_nav {
-	display: inline-block;
+		display: inline-block;
+		float:none;
 	}
-	
 	.animation-header nav {
 		width: 100%;
 	}
-
 	.animation-header nav a {
 		font-size: 13px;
 	}
 	.animation-header nav {
-	margin-right: 0;
+		margin-right: 0;
+	}
+	.animation-header h1, .animation-header nav a {
+		line-height: 1;
+	}
 }
 
-.animation-header h1, .animation-header nav a {
-    line-height: 1;
-}
+/* sub menu */
+
+.zeta-menu-bar {
+	float:left;
+	width: 95%;
 }
 
+.zeta-menu li {
+	float: right;
+	list-style: none;
+}
+
+.zeta-menu .mainImg {
+	margin-top: 15%;
+	margin-right: 20%;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 3px solid white;
+}
+
+.zeta-menu .subImg {
+	width: 30px;
+	height: 30px;
+}
+
+.zeta-menu li .expand {
+	position: right;
+	background: white;
+}
+
+.zeta-menu ul a {
+	color: grey;
+	display: block;
+	padding: 10px 20px 10px 20px;
+}
+
+.zeta-menu ul {
+	z-index: 500000;
+	background: white;
+	border: 1px solid silver;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	display: none;
+	padding: 0px;
+	position: absolute;
+	right: 30px;
+	top: 75px;
+	width: 130px;
+}
+
+.zeta-menu ul li {
+	z-index: 500000;
+	float: none;
+}
+
+.zeta-menu ul li.expand {
+	z-index: 500000;
+	background: #ddd;
+}
+
+.zeta-menu ul li.expand a {
+	z-index: 500000;
+	color: black;
+}
+
+.zeta-menu ul a {
+	z-index: 500000;
+	color: black;
+}
+
+.zeta-menu ul ul {
+	z-index: 500000;
+	margin: 0 auto;
+	top: 0;
+}
 
 /*
 @media screen and (max-width: 55em) {
@@ -162,4 +228,3 @@
 	}
 }
 */
-
