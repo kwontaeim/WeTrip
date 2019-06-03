@@ -1,0 +1,38 @@
+
+.search-wrapper {
+	 position: relative; 
+	 width: 100%;
+	 z-index: 0;
+	 overflow: hidden; 
+}
+
+video {
+    height: auto;
+    width: 100%;
+}
+
+.search-bar {
+	border:0px solid black; 
+	z-index: 2001;
+	width:100%; 
+	position: absolute; 
+	top:30%; left:52%; 
+	transform:translateX(-52%); 
+	text-align: center;
+	display:inline;
+	margin:0 auto;
+	padding-bottom:80px;
+}
+
+.search-bar > content > h2 {
+	 font-size: 80%;
+}
+
+.search-bar > content > div {
+	 font-size: 45%; 
+	 margin-bottom: 1.5%;
+}
+
+.jejugo {
+font-family:'Jeju Gothic', serif;
+}

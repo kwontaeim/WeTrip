@@ -10,6 +10,7 @@
 	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 	<!-- Animation Header css-->
 	<link rel="stylesheet" type="text/css" href="css/new-header.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index-content.css"/>
 </head>
 <body>
 	<div class="animation-header">
@@ -32,6 +33,7 @@
 				</li>
 			</ul>
 		</div>
+			<!-- sub menu -->
 		<div class="animation-header-menu">
 			<div class="main-title">
 				<img src="img/passport.png">
@@ -43,7 +45,31 @@
 				<a href="#" id="qnaPage">QnA</a>
 			</nav>
 		</div>
-
+	</div>
+	<!-- Video -->
+	<div class="search-wrapper">
+		<video data-setup="{}" autoplay loop>
+		<source src="mainfull2.mp4" type="video/mp4"/>
+		</video>
+		<div class="search-bar">
+			<div class="content">
+				<h2 class="jejugo">Let's go A TRIP with me!</h2>
+				<div class="jejugo">
+					 Looking for your trip mates with WE TRIP!
+				</div>
+				<div class="my-login jejugo" style="font-size: x-large; color: #FF7C4E; ">
+					<a class="regFormAtags" href="#"><span id="userName" style="font-weight: bold; font-size: 130%;"></span>
+					<span id="travelerRegForm" style="font-size: 120%;">, Let's find your trip mates!</span></a><span style="font-size:medium;color:white; margin-left: 2%;"><br>&laquo; show us your trip planning!</span>
+				</div>
+			</div>
+			<br>
+			<br>
+			<form class="form-inline" role="search" id="searchform" style=" margin: 0; padding: 0;">
+				<div class="form-group form-group-lg">
+					<input class="form-control" id="searchCity" name="where" type="text" placeholder="Place" style="width: 30%">&nbsp;&nbsp; <input id="searchStDt" name="startDt" type="text" class="form-control bit-startDate" placeholder="From" style="width: 25%">&nbsp;&nbsp; <input id="searchEdDt" name="endDt" type="text" class="form-control bit-endDate" placeholder="To" style="width: 25%">&nbsp; <input id="searchaddBtn" type="button" class="button filled red extra-narrow jejugo" value="SEARCH">
+				</div>
+			</form>
+		</div>
 	</div>
 	<br/>
 	<br/>
