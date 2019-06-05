@@ -10,9 +10,30 @@
 	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 	<!-- Animation Header css-->
 	<link rel="stylesheet" type="text/css" href="css/new-header.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index-content.css"/>
 </head>
 <body>
 	<div class="animation-header">
+			<div class='zeta-menu-bar my-login'>
+			<ul class="zeta-menu">
+				<li><a href="#2"><img src='img/icon-user-20-240.png' class="mainImg my-login"></a>
+				<ul>
+					<li><a href="#" class="myInfo"><img src='img/icon-note-19-240.png' class="subImg"><br>
+					MY INFO</a>
+					</li>
+					<li><a href="#" id="travelerMessage"><img src='img/icon-email-2-240.png' class="subImg"><br>
+					MESSAGE</a>
+					</li>
+					<li><a class="fadeandscale_open" id="accompany" href="#"><img src='img/icon-user-21-240.png' class="subImg"><br>
+					ACCOMPANY</a></li>
+					<li><a class="logoutBtn" href='#'><img src='img/icon-log-out-9-240.png' class="subImg"><br>
+					LOGOUT</a>
+					</li>
+				</ul>
+				</li>
+			</ul>
+		</div>
+			<!-- sub menu -->
 		<div class="animation-header-menu">
 			<div class="main-title">
 				<img src="img/passport.png">
@@ -25,6 +46,80 @@
 			</nav>
 		</div>
 	</div>
+	<!-- Video -->
+	<div class="search-wrapper">
+		<video data-setup="{}" autoplay loop>
+		<source src="mainfull2.mp4" type="video/mp4"/>
+		</video>
+		<div class="search-bar">
+			<div class="content">
+				<h2 class="jejugo">Let's go A TRIP with me!</h2>
+				<div class="jejugo">
+					 Looking for your trip mates with WE TRIP!
+				</div>
+				<div class="my-login jejugo" style="font-size: x-large; color: #FF7C4E; ">
+					<a class="regFormAtags" href="#"><span id="userName" style="font-weight: bold; font-size: 130%;"></span>
+					<span id="travelerRegForm" style="font-size: 120%;">, Let's find your trip mates!</span></a><span style="font-size:medium;color:white; margin-left: 2%;"><br>&laquo; show us your trip planning!</span>
+				</div>
+			</div>
+			<br>
+			<br>
+			<form class="form-inline" role="search" id="searchform" style=" margin: 0; padding: 0;">
+				<div class="form-group form-group-lg">
+					<input class="form-control" id="searchCity" name="where" type="text" placeholder="Place" style="width: 30%">&nbsp;&nbsp; <input id="searchStDt" name="startDt" type="text" class="form-control bit-startDate" placeholder="From" style="width: 25%">&nbsp;&nbsp; <input id="searchEdDt" name="endDt" type="text" class="form-control bit-endDate" placeholder="To" style="width: 25%">&nbsp; <input id="searchaddBtn" type="button" class="button filled red extra-narrow jejugo" value="SEARCH">
+				</div>
+			</form>
+		</div>
+	</div>
+<!-- animation-photo-bar -->
+		<div>
+			<section class="tiles">
+				<article class="style1">
+				<span class="image">
+				<img src="img/mini_main17.jpg" alt=""/>
+				</span>
+				<a href="" class="travelerList">
+				<h2>ACCOMPANY</h2>
+				<div class="content">
+					<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+				</div>
+				</a>
+				</article>
+				<article class="style2">
+				<span class="image">
+				<img src="img/mini_main10.jpg" alt=""/>
+				</span>
+				<a href="#" class="reviewPage">
+				<h2>REVIEW</h2>
+				<div class="content">
+					<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+				</div>
+				</a>
+				</article>
+				<article class="style3">
+				<span class="image">
+				<img src="img/mini_main12.jpg" alt=""/>
+				</span>
+				<a href="#" class="travelerList">
+				<h2>PLAN</h2>
+				<div class="content">
+					<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+				</div>
+				</a>
+				</article>
+				<article class="style4">
+				<span class="image">
+				<img src="img/mini_main15.jpg" alt=""/>
+				</span>
+				<a href="#" class="qnaPage">
+				<h2>Q&A</h2>
+				<div class="content">
+					<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+				</div>
+				</a>
+				</article>
+			</section>
+		</div>
 	<br/>
 	<br/>
 	<br/>
@@ -140,7 +235,25 @@
 	<br/>
 	<br/>
 	<br/>
+	<div class="footer">
+	<div class="footer-content">
+		<img src="img/logo.png" alt="로고파일자리" width="96"/>
+		<address>
+		<span>서내와기요미들</span><span>이곳은 회사 주소가 들어가야되지만 백수이므로 주소를적을수 없다</span><br>
+		<span>사업자등록번호 : (이곳은사업자번호란) TEL : 010-5321-8633</span>
+		<span>제휴문의 : java85@bit.com</span><br>
+		<span>COPYRIGHT© 2016 GD2723. ALL RIGHTS RESERVED.</span>
+		</address>
+		<div class="btn_sns">
+			<a href="https://www.instagram.com/travel_bit/" title="인스타그램 바로가기" target="_blank"><img src="img/sns_icon01.png" alt="인스타그램 바로가기" width="36"/></a>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+</div>
 	<!-- Animation Header js (It should at the bottom of the body-->
 	<script type="text/javascript" src="js/animatedHeader.js"></script>
+	<script type="text/javascript" src="js/menu.js"></script>
 </body>
 </html>
