@@ -63,7 +63,6 @@ font-family:'Jeju Gothic', serif;
       transition: transform 0.5s ease, opacity 0.5s ease;
       position: relative;
       margin: 2.5em 0 0 2.5em;
-      height: 20%;
       width: 20%;
     }
 
@@ -84,6 +83,8 @@ font-family:'Jeju Gothic', serif;
           display: block;
           width: 100%;
           height: 15em;
+          margin:0;
+          padding:0;
         }
 
         .tiles article > .image:before {
@@ -122,7 +123,6 @@ font-family:'Jeju Gothic', serif;
           left: 0;
           width: 100%;
           height: 100%;
-          opacity: 0.25;
           z-index: 2;
         }
 
@@ -152,7 +152,6 @@ font-family:'Jeju Gothic', serif;
         left: 0;
         width: 100%;
         height: 100%;
-        padding: 1em;
         border-radius: 4px;
         border-bottom: 0;
         color: #ffffff;
