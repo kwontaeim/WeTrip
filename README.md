@@ -2,7 +2,7 @@
 Bitcamp(Bootcamp) Team Project, Nov 2016
 
 ## Introduction
-The trend of travel is changing from group to solo. Even though they can be able to go travel whenever and wherever they want, It’s pretty hard to find a suitable company for the right time. And they’re also no proper platforms to hook them up between solo travellers. So at that point, we came up with the concept of WE TRIP.
+The trend of travel is changing from group to solo. Even though they can be able to go travel whenever and wherever they want, It’s pretty hard to find a suitable company for the right time. And they’re also no proper platforms to hook them up between solo travellers. So at that point, we came up with the concept of 'We Trip'.
 <br><br>
 **We trip helps you find an accompanies to make your trip joyful!**
 
