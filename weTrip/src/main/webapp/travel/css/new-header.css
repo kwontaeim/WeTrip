@@ -6,7 +6,8 @@
 .animation-header {
 	position: fixed;
 	width: 100%;
-	z-index: 1;
+	height: 130px;
+	z-index: 4;
 	background: #1e4147;
 }
 
@@ -50,7 +51,7 @@
 	text-transform: uppercase;
 	color: white;
 	letter-spacing: 0.2px;
-	font-size: 2.7em;
+	font-size: 2.5em;
 	float: left;
 }
 
@@ -74,14 +75,18 @@
 	transition: all 0.2s;
 }
 
+.animation-header.animation-header-shrink {
+		height: 120px;
+
+}
+
 .animation-header.animation-header-shrink h1, .animation-header.animation-header-shrink nav a
 	{
-	/* 	line-height: 100px; */
-	
+	 	line-height: 80px;
 }
 
 .animation-header.animation-header-shrink h1 {
-	font-size: 2.5em;
+	font-size: 2.3em;
 }
 
 /* sub menu */
